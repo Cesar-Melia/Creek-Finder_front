@@ -1,3 +1,6 @@
 import MapImage from './MapImage/MapImage';
-
-export { MapImage };
+import Navbar from './Navbar/Navbar'
+export {
+    MapImage,
+    Navbar
+};
