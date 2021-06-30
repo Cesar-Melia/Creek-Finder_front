@@ -1,37 +1,57 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Logo from './Logo.png'
+import { NavLink } from 'react-router-dom'
+
+import './Navbar.scss'
 
 const Navbar = () => {
     return (
-        <nav>
-            <ul>
+        <nav className="nav">
+            <div className="nav__left">
+                <img src={Logo} alt="Logo" className="nav__left" />
+            </div>
+            <ul className="nav__right">
                 <li>
-                    <Link to="/">
+                    <NavLink exact to="/" activeClassName='active' className="nav__link">
                         Home
-                    </Link>
-                    <Link to="/about">
-                        About
-                    </Link>
-                    <Link to="/detail">
-                        Detail
-                    </Link>
-                    <Link to="/creeks">
-                        Creeks
-                    </Link>
-                    <Link to="/map">
-                        Map
-                    </Link>
-                    <Link to="/login">
-                        Login
-                    </Link>
-                    <Link to="/register">
-                        Register
-                    </Link>
-                    <Link to="/contact">
-                        Contact
-                    </Link>
-
+                    </NavLink>
                 </li>
+                <li>
+                    <NavLink exact to="/about" activeClassName='active' className="nav__link">
+                        About
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink exact to="/detail" activeClassName='active' className="nav__link">
+                        Detail
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink exact to="/creeks" activeClassName='active' className="nav__link">
+                        Creeks
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink exact to="/map" activeClassName='active' className="nav__link">
+                        Map
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink exact to="/login" activeClassName='active' className="nav__link">
+                        Login
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink exact to="/register" activeClassName='active' className="nav__link">
+                        Register
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink exact to="/contact" activeClassName='active' className="nav__link">
+                        Contact
+                    </NavLink>
+                </li>
+
             </ul>
         </nav>
 

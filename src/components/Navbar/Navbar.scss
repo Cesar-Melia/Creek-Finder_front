@@ -1,0 +1,33 @@
+.nav{
+    border: 1px solid black;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: var(--color-orange);
+    
+    img{
+        width: 200px;
+    }
+
+    li{
+        display: inline;
+        margin:0 16px;  
+    }
+
+    &__link{
+        color: white;
+        text-decoration: none;
+        font-size:20px;
+        &:hover{
+            color: rgb(126, 126, 126);
+            border-bottom: 1px solid white;
+        }
+    }
+
+}
+
+.active{
+    color: rgb(126, 126, 126);
+    border-bottom: 1px solid white;
+}
+
