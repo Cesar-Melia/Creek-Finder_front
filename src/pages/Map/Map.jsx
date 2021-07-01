@@ -3,17 +3,17 @@ import { MapImage } from '../../components';
 
 const Map = () => {
   const BASE_URL = 'https://creek-finder.herokuapp.com';
-
   console.log('Entra en Map');
 
   useEffect(() => {
-    fetch(`${BASE_URL}/creeks`)
-      .then((res) => res.json())
-      .then((dataRes) => {
-        let creeks = dataRes;
+    const getCreeks = async () => {
+      let res = await fetch(`${BASE_URL}/creeks`);
+      let creeks = await res.json();
 
-        console.log(creeks);
-      });
+      console.log(creeks);
+    };
+
+    getCreeks();
   }, []);
 
   return (
