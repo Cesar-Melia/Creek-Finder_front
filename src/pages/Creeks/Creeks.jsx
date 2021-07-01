@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Creeks = () => {
-    return (
-        <div>Creeks working</div>
-    )
-}
+  return <main>Creeks working</main>;
+};
 
-export default Creeks
+export default Creeks;

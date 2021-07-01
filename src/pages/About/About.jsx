@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const About = () => {
-    return (
-        <div>About Woirking</div>
-    )
-}
+  return <main>About Woirking</main>;
+};
 
-export default About
+export default About;
