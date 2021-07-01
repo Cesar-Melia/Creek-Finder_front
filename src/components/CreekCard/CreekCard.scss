@@ -4,29 +4,23 @@
     --surface-color: rgb(255, 255, 255);
     --curve: 40;
   }
-* {
-    box-sizing: border-box;
-  }
   
   body {
     font-family: 'Noto Sans JP', sans-serif;
     background-color: #fef8f84f;
   }
   
-  .cards {
-    display: grid;
-    width: 500px;
-    gap: 2rem;
-    margin: 4rem 5vw;
-    padding: 0;
-    list-style-type: none;
+  .cards{
+    margin-bottom: 20px;
 
   }
-  
+
   .card {
     position: relative;
+    width: 450px;
     display: block;
     height: 100%;  
+    max-height: 340px;
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
@@ -40,6 +34,7 @@
   
   .card__overlay {
     position: absolute;
+    
     bottom: 0;
     left: 0;
     right: 0;
@@ -56,10 +51,11 @@
   
   .card__header {
     position: relative;
+    
     display: flex;
     align-items: center;
     gap: 2em;
-    padding: 2em;
+    padding: 1.5em;
     border-radius: calc(var(--curve) * 1px) 0 0 0;    
     background-color: var(--surface-color);
     transform: translateY(-100%);

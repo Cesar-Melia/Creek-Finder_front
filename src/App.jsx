@@ -2,6 +2,7 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 // import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { MapImage, Navbar } from './components';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import './App.scss';
 

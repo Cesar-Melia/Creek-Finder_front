@@ -5,22 +5,22 @@ import './CreekCard.scss'
 const CreekCard = ({ creek }) => {
     return (
 
-        <ul className="cards row">
-            <li className="cards col-4">
-                <div className="card">
-                    <img src={creek.img} className="card__image" alt="" />
-                    <div className="card__overlay">
-                        <div className="card__header">
-                            <div className="card__header-text">
-                                <h3 className="card__title">{creek.name}</h3>
-                                <span className="card__status">{creek.province}</span>
-                            </div>
+
+        <div className=" cards col-lg-6">
+            <div className="card">
+                <img src={creek.img} className="card__image " alt="" />
+                <div className="card__overlay">
+                    <div className="card__header">
+                        <div className="card__header-text">
+                            <h3 className="card__title">{creek.name}</h3>
+                            <span className="card__status">{creek.province}</span>
                         </div>
-                        <p className="card__description">{creek.description}</p>
                     </div>
+                    <p className="card__description">{creek.description}</p>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
+
 
     );
 }
