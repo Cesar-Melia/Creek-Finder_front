@@ -40,7 +40,7 @@ const App = () => {
             <Switch>
               <Route exact path='/' component={(props) => <Home {...props} />} />
               <Route exact path='/about' component={(props) => <About {...props} />} />
-              <Route exact path='/detail' component={(props) => <Detail {...props} />} />
+              <Route exact path='/detail/:id' component={(props) => <Detail {...props} />} />
               <Route exact path='/creeks' component={(props) => <Creeks {...props} creeks={creeks} />} />
               <Route exact path='/map' component={(props) => <Map {...props} creeks={creeks} />} />
               <Route exact path='/login' component={(props) => <Login {...props} />} />
