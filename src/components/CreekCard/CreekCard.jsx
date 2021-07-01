@@ -4,8 +4,9 @@ import './CreekCard.scss'
 
 const CreekCard = ({ creek }) => {
     return (
-        <ul className="cards">
-            <li>
+
+        <ul className="cards row">
+            <li className="cards col-4">
                 <div className="card">
                     <img src={creek.img} className="card__image" alt="" />
                     <div className="card__overlay">
@@ -15,11 +16,12 @@ const CreekCard = ({ creek }) => {
                                 <span className="card__status">{creek.province}</span>
                             </div>
                         </div>
-                        <p className="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+                        <p className="card__description">{creek.description}</p>
                     </div>
                 </div>
             </li>
         </ul>
+
     );
 }
 
