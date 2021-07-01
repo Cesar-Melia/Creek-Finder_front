@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.map-container{
+  display: flex;
+  justify-content: center;
+}
+
 .map {
   height: 60vh;
   width: 1000px;

@@ -37,8 +37,10 @@ const App = () => {
         </div>
 
       </Router>
+      <div className="map-container">
+        <MapImage />
+      </div>
 
-      <MapImage />
     </>
   );
 };

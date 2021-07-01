@@ -1,0 +1,83 @@
+.about-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction:column;
+    border:1px solid black;
+    height: 80vh;
+    padding:20px;
+    
+    &__card{
+        display: flex;
+        justify-content: space-around;
+        background-color: rgba(223, 211, 191, 0.431);
+        align-items: center;
+        flex-direction:column;
+        margin:80px 0;;
+        width:70%;
+        border:1px solid rgb(180, 180, 180);
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    }
+
+    &__text{
+        width: 70%;
+        text-align: justify;
+    }
+
+    &__rails{
+        // border:1px solid red;
+        width:100%;
+        position: absolute;
+        top: 70%;
+       
+        
+        
+        
+    }
+
+    &__gift{
+        width:200px;
+        // border: 1px solid black;
+        position: relative;
+        @keyframes adLove{
+            from{
+            left:20%;
+            }
+        
+            50%{
+                left:70%;
+            }
+        
+            100%{
+                left:20%;
+            }  
+
+            from{
+                
+                transform: scaleX(1);
+                  
+            }
+            
+        
+            50%{
+                transform: scaleX(0);
+            }
+            51%{
+                transform: scaleX(-1);
+            }
+        
+            100%{
+                transform: scaleX(-1);
+            }  
+        }
+        animation-name:adLove;
+        animation-duration:10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        
+    }
+
+    
+}
