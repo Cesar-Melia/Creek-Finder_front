@@ -51,29 +51,27 @@
 
             from{
                 
-                transform: scaleX(1);
+                transform: rotateY(0deg);
                   
             }
             
         
-            50%{
-                transform: scaleX(0);
+            49%{
+                transform: rotateY(0deg);
             }
             51%{
-                transform: scaleX(-1);
+                transform: rotateY(180deg);
             }
         
             100%{
-                transform: scaleX(-1);
+                transform: rotateY(180deg);
             }  
         }
         animation-name:adLove;
-        animation-duration:10s;
+        animation-duration:20s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
 
-        
     }
-
     
 }
