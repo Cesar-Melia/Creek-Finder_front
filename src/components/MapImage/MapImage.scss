@@ -1,0 +1,14 @@
+.map-image {
+  &__pop-up {
+  }
+
+  &__pop-text {
+    text-align: center;
+    color: var(--color-light-black);
+    font-size: 14px;
+  }
+
+  &__pop-img {
+    width: 120px;
+  }
+}
