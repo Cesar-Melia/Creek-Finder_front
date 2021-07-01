@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 // import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { MapImage, Navbar } from './components';
@@ -14,7 +14,23 @@ const Login = lazy(() => import('./pages/Login/Login'));
 const Register = lazy(() => import('./pages/Register/Register'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 
+const BASE_URL = 'http://localhost:3500';
+
 const App = () => {
+  const [creeks, setCreeks] = useState([]);
+  console.log(creeks);
+
+  useEffect(() => {
+    const getCreeks = async () => {
+      let res = await fetch(`${BASE_URL}/creeks`);
+      let creeksList = await res.json();
+
+      setCreeks(creeksList);
+    };
+
+    getCreeks();
+  }, []);
+
   return (
     <>
       <Router>
@@ -26,7 +42,7 @@ const App = () => {
               <Route exact path='/about' component={(props) => <About {...props} />} />
               <Route exact path='/detail' component={(props) => <Detail {...props} />} />
               <Route exact path='/creeks' component={(props) => <Creeks {...props} />} />
-              <Route exact path='/map' component={(props) => <Map {...props} />} />
+              <Route exact path='/map' component={(props) => <Map {...props} creeks={creeks} />} />
               <Route exact path='/login' component={(props) => <Login {...props} />} />
               <Route exact path='/register' component={(props) => <Register {...props} />} />
               <Route exact path='/contact' component={(props) => <Contact {...props} />} />

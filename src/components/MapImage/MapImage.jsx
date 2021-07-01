@@ -24,9 +24,9 @@ const MapImage = (props) => {
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
       />
-      {/* <Marker position={positionGreenIcon} icon={grenIcon}>
+      <Marker position={[39.9505, 4.0559]} icon={grenIcon}>
         <Popup>I am a green leaf</Popup>
-      </Marker> */}
+      </Marker>
     </Map>
   );
 };
