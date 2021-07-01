@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { MapImage } from '../../components';
 
 const Map = () => {
-  const BASE_URL = 'https://creek-finder.herokuapp.com';
+  const BASE_URL = 'http://localhost:3500';
   console.log('Entra en Map');
 
   useEffect(() => {
