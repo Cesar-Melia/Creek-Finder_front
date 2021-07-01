@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.map-container{
+main {
   display: flex;
   justify-content: center;
 }
@@ -12,13 +12,14 @@
   width: 1000px;
   margin: 50px;
 }
+
 :root {
-  --color-orange:#FFB051 ;
-  --color-green: #51FFA2;
-  --color-blue:#5AC5FF ;
-  --color-violet:#6876FF ;
-  --color-warm-white:#fff9eb ;
-  --color-white:#ffffff ;
-  --color-light-black:#202020 ;
-  --color-black:#000000 ;
+  --color-orange: #ffb051;
+  --color-green: #51ffa2;
+  --color-blue: #5ac5ff;
+  --color-violet: #6876ff;
+  --color-warm-white: #fff9eb;
+  --color-white: #ffffff;
+  --color-light-black: #202020;
+  --color-black: #000000;
 }
