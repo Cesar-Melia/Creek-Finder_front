@@ -1,8 +1,6 @@
 import { BackButton } from '../../components';
 import { ImgGallery } from '../../components';
-// import Carousel from 'react-bootstrap/Carousel';
-import ReactBnbGallery from 'react-bnb-gallery';
-import 'react-bnb-gallery/dist/style.css';
+import './Detail.scss';
 
 const Detail = (props) => {
   if (props.creek) {
@@ -12,8 +10,9 @@ const Detail = (props) => {
 
     return (
       <main>
-        <BackButton text='Volver' />
+        <h1 className='detail__title'>{props.creek.name}</h1>
         <ImgGallery photos={photos} creek={props.creek} />
+        <BackButton text='Volver' />
       </main>
     );
   } else {
