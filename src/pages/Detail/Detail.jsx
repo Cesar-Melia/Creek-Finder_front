@@ -12,9 +12,9 @@ const Detail = (props) => {
       <main>
         <h1 className='detail__title'>{props.creek.name}</h1>
         <ImgGallery photos={photos} creek={props.creek} />
-        <div>
-          <h4>Playa de {props.creek.type}</h4>
-          <p>{props.creek.description}</p>
+        <div className='detail__text-block'>
+          <h4 className='detail__type'>Playa de {props.creek.type}</h4>
+          <p className='detail__description'>{props.creek.description}</p>
         </div>
         <BackButton text='Volver' />
       </main>

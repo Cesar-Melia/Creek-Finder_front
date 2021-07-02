@@ -3,4 +3,17 @@
     color: var(--color-blue-dark);
     margin-top: 30px;
   }
+
+  &__text-block {
+    margin-top: 30px;
+    max-width: 800px;
+  }
+
+  &__type {
+    color: var(--color-gray);
+  }
+
+  &__description {
+    color: var(--color-gray);
+  }
 }
