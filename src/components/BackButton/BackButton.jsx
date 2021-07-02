@@ -1,4 +1,5 @@
 import { withRouter } from 'react-router-dom';
+import './BackButton.scss';
 
 const BackButton = (props) => {
   console.log(props);
@@ -10,7 +11,7 @@ const BackButton = (props) => {
       }}
       className='button'
     >
-      Back
+      {props.text}
     </button>
   );
 };

@@ -1,20 +1,19 @@
-import { useState } from 'react';
 import { BackButton } from '../../components';
+import { ImgGallery } from '../../components';
 // import Carousel from 'react-bootstrap/Carousel';
 import ReactBnbGallery from 'react-bnb-gallery';
 import 'react-bnb-gallery/dist/style.css';
-// import { withRouter } from 'react-router-dom';
 
 const Detail = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
   if (props.creek) {
-    const PHOTOS = props.creek.img.map((img) => img);
+    const photos = props.creek.img.map((img, index) => {
+      return { photo: img, number: index + 1 };
+    });
+
     return (
       <main>
-        <BackButton />
-        <button onClick={() => setIsOpen(true)}>Open gallery</button>
-        <ReactBnbGallery show={isOpen} photos={PHOTOS} onClose={() => setIsOpen(false)} />
+        <BackButton text='Volver' />
+        <ImgGallery photos={photos} creek={props.creek} />
       </main>
     );
   } else {
