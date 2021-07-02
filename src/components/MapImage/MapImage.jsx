@@ -3,10 +3,6 @@ import L from 'leaflet';
 import './MapImage.scss';
 import leafGreen from '../../assets/umbrella-50.png';
 
-// const Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-// 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-// });
-
 const MapImage = ({ creeks, setDetailId }) => {
   const positionMenorca = [39.9505, 4.0559];
   const zoom = 11;
