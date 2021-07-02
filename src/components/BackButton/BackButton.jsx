@@ -1,11 +1,18 @@
+import { withRouter } from 'react-router-dom';
+
 const BackButton = (props) => {
   console.log(props);
 
   return (
-    <button onClick={() => {}} className='button'>
+    <button
+      onClick={() => {
+        props.history.goBack();
+      }}
+      className='button'
+    >
       Back
     </button>
   );
 };
 
-export default BackButton;
+export default withRouter(BackButton);
