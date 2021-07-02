@@ -8,7 +8,7 @@ const Creeks = ({ creeks }) => {
   return (
     <div className="list">
       <div className="list__content">
-        <h2>Creek List</h2>
+        <h4>Creek List</h4>
       </div>
       <div >
         <div className="container">
