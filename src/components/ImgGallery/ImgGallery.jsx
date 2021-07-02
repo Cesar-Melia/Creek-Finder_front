@@ -8,8 +8,8 @@ const ImgGallery = ({ photos, creek }) => {
 
   if (photos) {
     return (
-      <section>
-        <div className='gallery d-flex flex-wrap'>
+      <section className='gallery'>
+        <div className='gallery__items'>
           {photos.map((photo) => {
             return (
               <img
