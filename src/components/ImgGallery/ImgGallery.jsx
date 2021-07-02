@@ -5,25 +5,33 @@ import './ImgGallery.scss';
 
 const ImgGallery = ({ photos, creek }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
 
   if (photos) {
     return (
       <section className='gallery'>
         <div className='gallery__items'>
-          {photos.map((photo) => {
+          <ReactBnbGallery
+            show={isOpen}
+            photos={photos}
+            activePhotoIndex={photoIndex}
+            onClose={() => setIsOpen(false)}
+          />
+          {photos.map((photo, index) => {
             return (
               <img
                 className='gallery__photo'
                 src={photo.photo}
                 key={JSON.stringify(photo)}
                 alt={creek.name}
-                onClick={() => setIsOpen(true)}
+                onClick={() => {
+                  setPhotoIndex(index);
+                  return setIsOpen(true);
+                }}
               />
             );
           })}
         </div>
-
-        <ReactBnbGallery show={isOpen} photos={photos} onClose={() => setIsOpen(false)} />
       </section>
     );
   } else {

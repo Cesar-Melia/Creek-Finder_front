@@ -23,11 +23,6 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink exact to='/detail' activeClassName='active' className='nav__link'>
-              Detail
-            </NavLink>
-          </li>
-          <li>
             <NavLink exact to='/creeks' activeClassName='active' className='nav__link'>
               Creeks
             </NavLink>
@@ -47,11 +42,11 @@ const Navbar = () => {
               Register
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink exact to='/contact' activeClassName='active' className='nav__link'>
               Contact
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>
