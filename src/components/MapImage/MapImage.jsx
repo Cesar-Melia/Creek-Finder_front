@@ -1,9 +1,13 @@
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
+import { useHistory } from 'react-router-dom';
+
 import './MapImage.scss';
 import leafGreen from '../../assets/umbrella-50.png';
 
 const MapImage = ({ creeks, setDetailId }) => {
+  const history = useHistory();
+  console.log(history)
   const positionMenorca = [39.9505, 4.0559];
   const zoom = 11;
 
@@ -35,8 +39,9 @@ const MapImage = ({ creeks, setDetailId }) => {
             onMouseOut={(ev) => {
               ev.target.closePopup();
             }}
-            onClick={(ev) => {
-              setDetailId(creek._id);
+            onClick={() => {
+              // setDetailId(creek._id);
+              history.push(`/detail/${creek._id}`)
             }}
           >
             <Popup className='map-image__pop-up'>

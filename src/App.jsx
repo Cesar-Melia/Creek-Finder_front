@@ -19,7 +19,7 @@ const BASE_URL = 'http://localhost:3500';
 
 const App = () => {
   const [creeks, setCreeks] = useState([]);
-  const [weather, setWeather] = useState([]);
+  const [weather, setWeather] = useState({});
   console.log(creeks);
 
 
@@ -46,6 +46,12 @@ const App = () => {
     getWeather();
 
   }, []);
+
+  const getCreekById = (id) => {
+    return creeks.find((creek) => creek._id === id);
+
+  }
+
   console.log(weather)
   return (
     <>
@@ -56,9 +62,9 @@ const App = () => {
             <Switch>
               <Route exact path='/' component={(props) => <Home {...props} creeks={creeks} />} />
               <Route exact path='/about' component={(props) => <About {...props} />} />
-              <Route exact path='/detail/:id' component={(props) => <Detail {...props} />} />
+              <Route exact path='/detail/:id' component={(props) => <Detail {...props} creek={getCreekById(props.match.params.id)} />} />
               <Route exact path='/creeks' component={(props) => <Creeks {...props} creeks={creeks} />} />
-              <Route exact path='/map' component={(props) => <Map {...props} creeks={creeks} weather={weather.location} />} />
+              <Route exact path='/map' component={(props) => <Map {...props} creeks={creeks} weather={weather} />} />
               <Route exact path='/login' component={(props) => <Login {...props} />} />
               <Route exact path='/register' component={(props) => <Register {...props} />} />
               <Route exact path='/contact' component={(props) => <Contact {...props} />} />

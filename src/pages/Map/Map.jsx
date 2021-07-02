@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Detail from '../../pages/Detail/Detail';
 import Weather from '../../components/Weather/Weather.jsx'
 import { MapImage } from '../../components';

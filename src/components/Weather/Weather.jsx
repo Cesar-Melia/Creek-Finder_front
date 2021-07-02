@@ -1,10 +1,12 @@
 import React from 'react'
-import { divIcon } from 'leaflet'
+// import { divIcon } from 'leaflet'
 
 const Weather = ({ weather }) => {
-
+  if (!weather.location) {
+    return (<div>Cargando...</div>)
+  }
   return (
-    <div>hola</div>
+    <div>{weather.location.address}</div>
   )
 }
 
