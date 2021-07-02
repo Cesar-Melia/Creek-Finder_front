@@ -2,7 +2,7 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 // import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar } from './components';
-import Normalize from 'react-normalize';
+// import Normalize from 'react-normalize';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import './App.scss';
@@ -53,7 +53,7 @@ const App = () => {
   console.log(weather);
   return (
     <>
-      <Normalize />
+      {/* <Normalize /> */}
       <Router>
         <div>
           <Navbar />
