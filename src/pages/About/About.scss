@@ -3,8 +3,6 @@
     justify-content: space-around;
     align-items: center;
     flex-direction:column;
-    border:1px solid black;
-    height: 80vh;
     padding:20px;
     
     &__card{
@@ -25,36 +23,41 @@
         text-align: justify;
     }
 
+
+    &__path{
+        width:80%;
+    }
     &__rails{
-        // border:1px solid red;
-        width:100%;
-        position: absolute;
-        top: 70%;
+        width:20%;
+        display:flex;
+        justify-content:space-between;
+        @keyframes mover{
+            from{
+            width:20%;
+            }
+        
+            50%{
+                width:90%;
+            }
+        
+            100%{
+                width:20%;
+            }  
+
+        }
+        animation-name:mover;
+        animation-duration:20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
 
     &__gift{
         width:200px;
-        // border: 1px solid black;
-        position: relative;
         @keyframes adLove{
-            from{
-            left:20%;
-            }
-        
-            50%{
-                left:70%;
-            }
-        
-            100%{
-                left:20%;
-            }  
 
-            from{
-                
-                transform: rotateY(0deg);
-                  
+            from{               
+                transform: rotateY(0deg);    
             }
-            
         
             49%{
                 transform: rotateY(0deg);
