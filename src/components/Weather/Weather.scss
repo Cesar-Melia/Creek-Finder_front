@@ -1,0 +1,30 @@
+.weather-container{
+  border:1px solid black;
+  width:100%;
+  display: flex;
+  justify-content:space-around;
+
+  &__card{
+    border:1px solid black;
+    border-radius:20%;
+    padding: 20px;
+  }
+
+  &__card-up{
+    border:1px solid black;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__card-down{
+    border:1px solid black;
+  }
+  
+  &__card-left{
+    border:1px solid black;
+  }
+
+  &__card-right{
+    border:1px solid black;
+  }
+}

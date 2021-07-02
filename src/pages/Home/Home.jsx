@@ -9,7 +9,7 @@ const Home = ({ creeks }) => {
     <AliceCarousel autoPlay autoPlayInterval="3000">
       {creeks.map(creek => {
         return (
-          <div className="slidercont">
+          <div className="slidercont" key={JSON.stringify(creek)}>
             <img src={creek.img} alt="" className="slidercont__img" />
             <span className="slidercont__name">{creek.name}</span>
           </div>
