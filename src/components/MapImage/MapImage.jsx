@@ -3,6 +3,10 @@ import L from 'leaflet';
 import './MapImage.scss';
 import leafGreen from '../../assets/umbrella-50.png';
 
+// const Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+// 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+// });
+
 const MapImage = ({ creeks, setDetailId }) => {
   const positionMenorca = [39.9505, 4.0559];
   const zoom = 11;
@@ -18,10 +22,10 @@ const MapImage = ({ creeks, setDetailId }) => {
   });
 
   return (
-    <Map className='map' center={positionMenorca} zoom={zoom}>
+    <Map className='map-image' center={positionMenorca} zoom={zoom}>
       <TileLayer
-        attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+        attribution='<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url='https://{s}.tile.jawg.io/jawg-terrain/{z}/{x}/{y}{r}.png?access-token=p3g9U1eXuX4kSvLCpTgXgl1LjGcfCjXEhDFRRS2oBbxTCdXmJReCcot7HemafMoY'
       />
       {creeks.map((creek) => {
         return (
