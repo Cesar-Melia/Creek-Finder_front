@@ -4,8 +4,6 @@ import './CreekCard.scss'
 
 const CreekCard = ({ creek }) => {
     return (
-
-
         <div className=" cards col-lg-6">
             <div className="card">
                 <img src={creek.img} className="card__image " alt="" />
@@ -20,8 +18,6 @@ const CreekCard = ({ creek }) => {
                 </div>
             </div>
         </div>
-
-
     );
 }
 
