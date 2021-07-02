@@ -7,7 +7,7 @@ const Creeks = ({ creeks }) => {
   return (
     <div className='list'>
       <div className='list__title'>
-        <h4>Creek List</h4>
+        <h4>TOP 10 Calas</h4>
       </div>
       <div className='container'>
         <div className='row'>
