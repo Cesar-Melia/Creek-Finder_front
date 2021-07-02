@@ -1,7 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 // import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { MapImage, Navbar } from './components';
+import { Navbar } from './components';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import './App.scss';
@@ -19,7 +19,9 @@ const BASE_URL = 'http://localhost:3500';
 
 const App = () => {
   const [creeks, setCreeks] = useState([]);
+  const [weather, setWeather] = useState([]);
   console.log(creeks);
+
 
   useEffect(() => {
     const getCreeks = async () => {
@@ -31,7 +33,18 @@ const App = () => {
 
     getCreeks();
   }, []);
+  useEffect(() => {
+    const getWeather = async () => {
+      let res = await fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?aggregateHours=24&combinationMethod=aggregate&contentType=json&unitGroup=metric&locationMode=single&key=XJW3MMM5LMPQU2KXVDRCC6S6R&dataElements=default&locations=Menorca%20Spain'
+      )
+      let apiWeather = await res.json();
+      setWeather(apiWeather);
+    };
 
+    getWeather();
+
+  }, []);
+  console.log(weather)
   return (
     <>
       <Router>
