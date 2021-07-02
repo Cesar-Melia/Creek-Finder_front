@@ -7,7 +7,7 @@ import leafGreen from '../../assets/umbrella-50.png';
 
 const MapImage = ({ creeks, setDetailId }) => {
   const history = useHistory();
-  console.log(history)
+  console.log(history);
   const positionMenorca = [39.9505, 4.0559];
   const zoom = 11;
 
@@ -41,12 +41,12 @@ const MapImage = ({ creeks, setDetailId }) => {
             }}
             onClick={() => {
               // setDetailId(creek._id);
-              history.push(`/detail/${creek._id}`)
+              history.push(`/detail/${creek._id}`);
             }}
           >
             <Popup className='map-image__pop-up'>
               <p className='map-image__pop-text'>{creek.name}</p>
-              <img src={creek.img} className='map-image__pop-img' alt='creek' />
+              <img src={creek.img[0]} className='map-image__pop-img' alt='creek' />
             </Popup>
           </Marker>
         );
