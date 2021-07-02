@@ -1,9 +1,11 @@
+
 .list{
   display:flex;
   justify-content:center;
   flex-direction:column;
   align-items:center;
-  &__content{
+  
+  &__title{
     margin-top: 40px;
   }
 

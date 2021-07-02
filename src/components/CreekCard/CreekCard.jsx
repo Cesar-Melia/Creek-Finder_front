@@ -16,7 +16,7 @@ const CreekCard = ({ creek }) => {
                             <span className="card__status">{creek.province}</span>
                         </div>
                     </div>
-                    <p className="card__description">{creek.description}</p>
+                    <p className="card__description">Tipo de Playa: {creek.type}</p>
                 </div>
             </div>
         </div>
