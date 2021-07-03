@@ -11,6 +11,7 @@ const Home = lazy(() => import('./pages/Home/Home'));
 const About = lazy(() => import('./pages/About/About'));
 const Detail = lazy(() => import('./pages/Detail/Detail'));
 const Creeks = lazy(() => import('./pages/Creeks/Creeks'));
+const TopCreeks = lazy(() => import('./pages/TopCreeks/TopCreeks'));
 const Map = lazy(() => import('./pages/Map/Map'));
 const Login = lazy(() => import('./pages/Login/Login'));
 const Register = lazy(() => import('./pages/Register/Register'));
@@ -61,13 +62,14 @@ const App = () => {
             <Switch>
               <Route exact path='/' component={(props) => <Home {...props} creeks={creeks} />} />
               <Route exact path='/about' component={(props) => <About {...props} />} />
+              <Route exact path='/creeks' component={(props) => <Creeks {...props} creeks={creeks} />} />
+              <Route exact path='/top-creeks' component={(props) => <TopCreeks {...props} creeks={creeks} />} />
+              <Route exact path='/map' component={(props) => <Map {...props} creeks={creeks} weather={weather} />} />
               <Route
                 exact
                 path='/detail/:id'
                 component={(props) => <Detail {...props} creek={getCreekById(props.match.params.id)} />}
               />
-              <Route exact path='/creeks' component={(props) => <Creeks {...props} creeks={creeks} />} />
-              <Route exact path='/map' component={(props) => <Map {...props} creeks={creeks} weather={weather} />} />
               <Route exact path='/login' component={(props) => <Login {...props} />} />
               <Route exact path='/register' component={(props) => <Register {...props} />} />
               <Route exact path='/contact' component={(props) => <Contact {...props} />} />

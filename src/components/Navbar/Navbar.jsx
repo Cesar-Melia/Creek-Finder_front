@@ -14,22 +14,27 @@ const Navbar = () => {
         <ul>
           <li>
             <NavLink exact to='/' activeClassName='active' className='nav__link'>
-              Home
+              Inicio
             </NavLink>
           </li>
           <li>
             <NavLink exact to='/about' activeClassName='active' className='nav__link'>
-              About
+              Sobre Nosotros
             </NavLink>
           </li>
           <li>
             <NavLink exact to='/creeks' activeClassName='active' className='nav__link'>
-              Creeks
+              Calas
+            </NavLink>
+          </li>
+          <li>
+            <NavLink exact to='/top-creeks' activeClassName='active' className='nav__link'>
+              Top 10
             </NavLink>
           </li>
           <li>
             <NavLink exact to='/map' activeClassName='active' className='nav__link'>
-              Map
+              Mapa
             </NavLink>
           </li>
           <li>
@@ -39,14 +44,9 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink exact to='/register' activeClassName='active' className='nav__link'>
-              Register
+              Registro
             </NavLink>
           </li>
-          {/* <li>
-            <NavLink exact to='/contact' activeClassName='active' className='nav__link'>
-              Contact
-            </NavLink>
-          </li> */}
         </ul>
       </nav>
     </header>
