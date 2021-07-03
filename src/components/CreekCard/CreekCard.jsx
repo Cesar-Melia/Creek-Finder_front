@@ -1,10 +1,16 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom'
 
 import './CreekCard.scss';
 
 const CreekCard = ({ creek }) => {
+  const history = useHistory();
+  const sender = () => {
+    history.push(`/detail/${creek._id}`)
+  }
+
   return (
-    <div className=' cards col-lg-6'>
+    <div className=' cards col-lg-6' onClick={sender}>
       <div className='card'>
         <img src={creek.img[0]} className='card__image ' alt='' />
         <div className='card__overlay'>
