@@ -1,3 +1,17 @@
+
 .form-container{
   z-index: 1;
+  border: 1px solid black;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  min-height: 500px;
+
+  &__form{
+    display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  }
 }

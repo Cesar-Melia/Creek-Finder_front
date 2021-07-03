@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 
-import './LoginForm'
+import './LoginForm.scss'
 
 const BASE_URL = 'http://localhost:3500';
 const LoginForm = () => {
@@ -13,12 +13,15 @@ const LoginForm = () => {
     const us = await fetch(`${BASE_URL}/auth/login`, requestOptions)
     const usData = await us.json()
     console.log('respuesta fetch', usData)
-    history.push('/')
+    if (!usData.status) {
+      history.push('/')
+    }
+
   }
   return (
     <div className="form-container">
       <h2>Creek Finder</h2>
-      <form onSubmit={submitForm}>
+      <form onSubmit={submitForm} className="form-container__form">
         <label >
           <p>Email</p>
           <input type="email" name="email" />
