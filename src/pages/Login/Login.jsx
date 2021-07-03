@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginForm from '../../components/LoginForm/LoginForm'
 import './Login.scss';
 
 const Login = () => {
@@ -6,6 +7,7 @@ const Login = () => {
     <main>
       <div className='wrapper'>
         <div className='wave'></div>
+        <LoginForm />
       </div>
     </main>
   );

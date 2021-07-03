@@ -20,6 +20,8 @@ const Detail = (props) => {
         </div>
         <BackButton text='Volver' />
         <Weather lat={props.creek.lat} lng={props.creek.lng} />
+
+
       </main>
     );
   } else {
