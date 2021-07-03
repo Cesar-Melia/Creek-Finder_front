@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Detail from '../../pages/Detail/Detail';
-import Weather from '../../components/Weather/Weather.jsx'
+import { Weather } from '../../components';
 import { MapImage } from '../../components';
 
-import './Map.scss'
+import './Map.scss';
 
 const Map = ({ creeks, weather }) => {
   const [detailId, setDetailId] = useState(undefined);
@@ -19,7 +19,7 @@ const Map = ({ creeks, weather }) => {
     );
   } else {
     return (
-      <main className="map-page-container">
+      <main className='map-page-container'>
         <MapImage creeks={creeks} setDetailId={setDetailId} />
         <Weather weather={weather} />
       </main>

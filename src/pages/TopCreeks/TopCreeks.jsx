@@ -1,5 +1,5 @@
 import React from 'react';
-import CreekCard from '../../components/CreekCard/CreekCard';
+import { CreekCard } from '../../components';
 
 import './TopCreeks.scss';
 
