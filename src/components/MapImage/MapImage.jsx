@@ -4,21 +4,18 @@ import { useHistory } from 'react-router-dom';
 import { ListButton } from '../../components';
 
 import './MapImage.scss';
-import leafGreen from '../../assets/umbrella-50.png';
+import umbrella from '../../assets/umbrella-50.png';
 
 const MapImage = ({ creeks, setDetailId }) => {
   const history = useHistory();
   console.log(history);
-  const positionMenorca = [39.9505, 4.0559];
+  const positionMenorca = [39.98, 4.0559];
   const zoom = 11;
 
-  const grenIcon = L.icon({
-    iconUrl: leafGreen,
-    // shadowUrl: leafShadow,
+  const umbrellaIcon = L.icon({
+    iconUrl: umbrella,
     iconSize: [50, 50], // size of the icon
-    // shadowSize: [50, 64], // size of the shadow
     iconAnchor: [25, 45], // point of the icon which will correspond to marker's location
-    // shadowAnchor: [4, 62], // the same for the shadow
     popupAnchor: [-3, -50],
   });
 
@@ -34,7 +31,7 @@ const MapImage = ({ creeks, setDetailId }) => {
           return (
             <Marker
               position={[creek.lat, creek.lng]}
-              icon={grenIcon}
+              icon={umbrellaIcon}
               key={JSON.stringify(creek)}
               onMouseOver={(ev) => {
                 ev.target.openPopup();
@@ -43,7 +40,6 @@ const MapImage = ({ creeks, setDetailId }) => {
                 ev.target.closePopup();
               }}
               onClick={() => {
-                // setDetailId(creek._id);
                 history.push(`/detail/${creek._id}`);
               }}
             >
