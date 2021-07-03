@@ -23,6 +23,23 @@
     background-color: rgba(65, 123, 200, 0.726);
     box-shadow: 3px 3px 8px 5px #888888;
     z-index: 1;
+
+    &:hover{
+      background-color: rgba(65, 200, 144, 0.726);
+      @keyframes carder{
+        0%{
+          width:250px;
+        }
+        50%{
+          width:300px;
+        }
+        100%{
+          width: 250px;
+        }
+      }
+      animation-name:carder;
+      animation-duration:0.5s;
+    }
     
   }
 
@@ -55,6 +72,17 @@
     text-align: center;
     
   }
+
+  &__max{
+    color: red;
+  }
+
+  &__min{
+    color: blue;
+  }
+  &__down-icon{
+    width:20px;
+  }
 }
 
 .icon{
@@ -63,7 +91,7 @@
 
 .span{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 p{
