@@ -11,10 +11,25 @@
     flex-direction: column;
   }
 
+  &__name-block {
+    display: flex;
+  }
+
   &__name {
+    margin-right: 20px;
     font-size: 18px;
     font-weight: bold;
     color: var(--color-blue-dark);
+
+    &:hover {
+      color: var(--color-green);
+      cursor: pointer;
+    }
+  }
+
+  &__province {
+    font-size: 14px;
+    color: var(--color-light-gray);
   }
 
   &__info {

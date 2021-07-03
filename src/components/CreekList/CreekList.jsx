@@ -19,7 +19,7 @@ const CreekList = ({ creeks }) => {
   return (
     <section className='list'>
       <div className='list__title-block'>
-        <h2 className='list__title'>Listado de Calas</h2>
+        <h2 className='list__title'>Lista de Calas</h2>
         <MapButton />
       </div>
       <div>
