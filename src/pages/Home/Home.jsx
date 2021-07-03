@@ -6,7 +6,7 @@ import './Home.scss';
 
 const Home = ({ creeks }) => {
   return (
-    <AliceCarousel autoPlay autoPlayInterval='1000'>
+    <AliceCarousel autoPlay autoPlayInterval='2000'>
       {creeks.map((creek) => {
         return (
           <div className='slidercont' key={JSON.stringify(creek)}>
