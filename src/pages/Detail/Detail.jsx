@@ -1,5 +1,7 @@
 import { BackButton } from '../../components';
 import { ImgGallery } from '../../components';
+import Weather from '../../components/Weather/Weather'
+
 import './Detail.scss';
 
 const Detail = (props) => {
@@ -17,6 +19,7 @@ const Detail = (props) => {
           <p className='detail__description'>{props.creek.description}</p>
         </div>
         <BackButton text='Volver' />
+        <Weather lat={props.creek.lat} lng={props.creek.lng} />
       </main>
     );
   } else {

@@ -19,7 +19,7 @@ const BASE_URL = 'http://localhost:3500';
 
 const App = () => {
   const [creeks, setCreeks] = useState([]);
-  const [weather, setWeather] = useState({});
+  // const [weather, setWeather] = useState({});
   console.log(creeks);
 
   useEffect(() => {
@@ -33,23 +33,23 @@ const App = () => {
     getCreeks();
   }, []);
 
-  useEffect(() => {
-    const getWeather = async () => {
-      let res = await fetch(
-        'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?aggregateHours=24&combinationMethod=aggregate&contentType=json&unitGroup=metric&locationMode=single&key=XJW3MMM5LMPQU2KXVDRCC6S6R&dataElements=default&locations=carrer%20de%20maria%20lluisa%20serra'
-      );
-      let apiWeather = await res.json();
-      setWeather(apiWeather);
-    };
+  // useEffect(() => {
+  //   const getWeather = async () => {
+  //     let res = await fetch(
+  //       'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?aggregateHours=24&combinationMethod=aggregate&contentType=json&unitGroup=metric&locationMode=single&key=XJW3MMM5LMPQU2KXVDRCC6S6R&dataElements=default&locations=carrer%20de%20maria%20lluisa%20serra'
+  //     );
+  //     let apiWeather = await res.json();
+  //     setWeather(apiWeather);
+  //   };
 
-    getWeather();
-  }, []);
+  //   getWeather();
+  // }, []);
 
   const getCreekById = (id) => {
     return creeks.find((creek) => creek._id === id);
   };
 
-  console.log(weather);
+
   return (
     <>
       {/* <Normalize /> */}
@@ -62,7 +62,7 @@ const App = () => {
               <Route exact path='/about' component={(props) => <About {...props} />} />
               <Route exact path='/creeks' component={(props) => <Creeks {...props} creeks={creeks} />} />
               <Route exact path='/top-creeks' component={(props) => <TopCreeks {...props} creeks={creeks} />} />
-              <Route exact path='/map' component={(props) => <Map {...props} creeks={creeks} weather={weather} />} />
+              <Route exact path='/map' component={(props) => <Map {...props} creeks={creeks} />} />
               <Route
                 exact
                 path='/detail/:id'

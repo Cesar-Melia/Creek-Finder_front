@@ -5,7 +5,7 @@ import { MapImage } from '../../components';
 
 import './Map.scss';
 
-const Map = ({ creeks, weather }) => {
+const Map = ({ creeks }) => {
   const [detailId, setDetailId] = useState(undefined);
 
   if (detailId) {
@@ -21,7 +21,7 @@ const Map = ({ creeks, weather }) => {
     return (
       <main className='map-page-container'>
         <MapImage creeks={creeks} setDetailId={setDetailId} />
-        <Weather weather={weather} />
+
       </main>
     );
   }
