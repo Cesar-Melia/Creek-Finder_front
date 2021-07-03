@@ -1,9 +1,12 @@
 .nav {
-  z-index: 99;
+  position: absolute;
+  top: 0;
+  z-index: 2;
   border-bottom: 1px solid var(--color-blue-dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   background: linear-gradient(to right, #7df3ed, #91d3f3, #49bfff);
 
   &__right {

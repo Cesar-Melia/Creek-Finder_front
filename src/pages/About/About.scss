@@ -1,80 +1,75 @@
-.about-container{
+.about-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 120px;
+
+  &__card {
     display: flex;
     justify-content: space-around;
+    background-color: rgba(223, 211, 191, 0.431);
     align-items: center;
-    flex-direction:column;
-    padding:20px;
-    
-    &__card{
-        display: flex;
-        justify-content: space-around;
-        background-color: rgba(223, 211, 191, 0.431);
-        align-items: center;
-        flex-direction:column;
-        margin:80px 0;;
-        width:70%;
-        border:1px solid rgb(180, 180, 180);
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    margin: 80px 0;
+    width: 70%;
+    border: 1px solid rgb(180, 180, 180);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
 
+  &__text {
+    width: 70%;
+    text-align: justify;
+  }
+
+  &__path {
+    width: 80%;
+  }
+  &__rails {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    @keyframes mover {
+      from {
+        width: 20%;
+      }
+
+      50% {
+        width: 90%;
+      }
+
+      100% {
+        width: 20%;
+      }
     }
+    animation-name: mover;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
 
-    &__text{
-        width: 70%;
-        text-align: justify;
+  &__gift {
+    width: 200px;
+    @keyframes adLove {
+      from {
+        transform: rotateY(0deg);
+      }
+
+      49% {
+        transform: rotateY(0deg);
+      }
+      51% {
+        transform: rotateY(180deg);
+      }
+
+      100% {
+        transform: rotateY(180deg);
+      }
     }
-
-
-    &__path{
-        width:80%;
-    }
-    &__rails{
-        width:20%;
-        display:flex;
-        justify-content:space-between;
-        @keyframes mover{
-            from{
-            width:20%;
-            }
-        
-            50%{
-                width:90%;
-            }
-        
-            100%{
-                width:20%;
-            }  
-
-        }
-        animation-name:mover;
-        animation-duration:20s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-
-    &__gift{
-        width:200px;
-        @keyframes adLove{
-
-            from{               
-                transform: rotateY(0deg);    
-            }
-        
-            49%{
-                transform: rotateY(0deg);
-            }
-            51%{
-                transform: rotateY(180deg);
-            }
-        
-            100%{
-                transform: rotateY(180deg);
-            }  
-        }
-        animation-name:adLove;
-        animation-duration:20s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-
-    }
-    
+    animation-name: adLove;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
 }
