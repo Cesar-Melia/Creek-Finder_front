@@ -38,11 +38,6 @@
     flex-direction: column;
   }
 
-  &__img-block {
-    display: flex;
-    justify-content: end;
-  }
-
   &__photo {
     object-fit: cover;
     object-position: center;

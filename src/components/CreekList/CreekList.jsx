@@ -1,26 +1,7 @@
-import { useState } from 'react';
 import { CreekListItem, MapButton } from '../../components';
 import './CreekList.scss';
 
 const CreekList = ({ creeks }) => {
-  const [searchParam, setSearchParam] = useState();
-  const [searchValue, setSearchValue] = useState();
-
-  const filterCreeks = (param, value) => {
-    setSearchParam(param);
-    setSearchValue(value);
-  };
-
-  if (searchParam && searchValue) {
-    const creeksSelection = creeks.filter((creek) => creek[searchParam] === searchValue);
-
-    return (
-      <section>
-        {creeksSelection && creeksSelection.map((creek) => <CreekListItem key={JSON.stringify(creek)} creek={creek} />)}
-      </section>
-    );
-  }
-
   return (
     <section className='list'>
       <div className='list__title-block'>

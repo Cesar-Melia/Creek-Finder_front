@@ -1,0 +1,26 @@
+.filter-nav {
+  width: 20%;
+  margin-top: 40px;
+
+  &__input {
+    font-size: 14px;
+    color: var(--color-blue-dark);
+    border: 1px solid var(--color-blue-dark);
+    border-radius: 4px;
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--color-blue);
+    }
+
+    &::placeholder {
+      color: var(--color-light-gray);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+}
