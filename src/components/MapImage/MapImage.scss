@@ -1,8 +1,7 @@
 .map-image {
   height: 70vh;
   width: 100%;
-  // margin: 50px 0;
-  z-index: 0;
+  position: relative;
 
   &__pop-up {
   }
@@ -16,4 +15,11 @@
   &__pop-img {
     width: 120px;
   }
+}
+
+.list-button {
+  z-index: 999;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }

@@ -2,8 +2,6 @@ import { withRouter } from 'react-router-dom';
 import './ListButton.scss';
 
 const ListButton = (props) => {
-  console.log(props);
-
   return (
     <button
       onClick={() => {
@@ -11,7 +9,7 @@ const ListButton = (props) => {
       }}
       className='list-button'
     >
-      Mapa
+      Lista
     </button>
   );
 };

@@ -6,6 +6,11 @@ const CreekList = ({ creeks }) => {
   const [searchParam, setSearchParam] = useState();
   const [searchValue, setSearchValue] = useState();
 
+  const filterCreeks = (param, value) => {
+    setSearchParam(param);
+    setSearchValue(value);
+  };
+
   if (searchParam && searchValue) {
     const creeksSelection = creeks.filter((creek) => creek[searchParam] === searchValue);
 
