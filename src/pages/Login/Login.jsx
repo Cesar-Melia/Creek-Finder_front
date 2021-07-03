@@ -4,8 +4,8 @@ import './Login.scss';
 const Login = () => {
   return (
     <main>
-      <div class='wrapper'>
-        <div class='wave'></div>
+      <div className='wrapper'>
+        <div className='wave'></div>
       </div>
     </main>
   );
