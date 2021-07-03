@@ -20,7 +20,6 @@ const BASE_URL = 'http://localhost:3500';
 const App = () => {
   const [creeks, setCreeks] = useState([]);
   const [weather, setWeather] = useState({});
-  console.log(creeks);
 
   useEffect(() => {
     const getCreeks = async () => {
@@ -49,7 +48,6 @@ const App = () => {
     return creeks.find((creek) => creek._id === id);
   };
 
-  console.log(weather);
   return (
     <>
       {/* <Normalize /> */}

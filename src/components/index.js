@@ -8,6 +8,7 @@ import CreekList from './CreekList/CreekList';
 import CreekListItem from './CreekListItem/CreekListItem';
 import MapButton from './MapButton/MapButton';
 import ListButton from './ListButton/ListButton';
+import CreekFilterNav from './CreekFilterNav/CreekFilterNav';
 
 export {
   MapImage,
@@ -20,4 +21,5 @@ export {
   CreekListItem,
   MapButton,
   ListButton,
+  CreekFilterNav,
 };

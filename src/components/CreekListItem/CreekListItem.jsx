@@ -30,7 +30,7 @@ const CreekListItem = ({ creek }) => {
           <span>Playa de {creek.type}</span>
         </div>
       </div>
-      <div className='item__img-block'>
+      <div>
         {creek.img.map((img, index) => {
           if (index < 3) {
             return (
@@ -38,6 +38,7 @@ const CreekListItem = ({ creek }) => {
                 src={img}
                 alt={creek.name + index}
                 className='item__photo'
+                key={JSON.stringify(img)}
                 onClick={() => {
                   setPhotoIndex(index);
                   return setIsOpen(true);
