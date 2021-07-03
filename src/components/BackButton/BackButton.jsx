@@ -9,7 +9,7 @@ const BackButton = (props) => {
       onClick={() => {
         props.history.goBack();
       }}
-      className='button'
+      className='back-button'
     >
       {props.text}
     </button>
