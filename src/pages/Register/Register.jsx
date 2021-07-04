@@ -1,7 +1,8 @@
 import React from 'react';
 import RegisterForm from '../../components/RegisterForm/RegisterForm'
 
-const Register = () => {
+const Register = ({ showFooter }) => {
+  showFooter(true);
   return (
     <div>
       <RegisterForm />

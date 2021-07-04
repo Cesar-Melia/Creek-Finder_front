@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Detail from '../../pages/Detail/Detail';
 import { Weather } from '../../components';
 import { MapImage } from '../../components';
 
 import './Map.scss';
 
-const Map = ({ creeks }) => {
+const Map = ({ creeks, showFooter }) => {
   const [detailId, setDetailId] = useState(undefined);
+  showFooter(false);
 
   if (detailId) {
     const creek = creeks.find((creek) => creek._id === detailId);

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Contact = () => {
+const Contact = ({ showFooter }) => {
+  showFooter(true);
   return <main>Contact Working</main>;
 };
 

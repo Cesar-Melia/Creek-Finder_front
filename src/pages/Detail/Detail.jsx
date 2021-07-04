@@ -5,6 +5,7 @@ import Weather from '../../components/Weather/Weather';
 import './Detail.scss';
 
 const Detail = (props) => {
+  props.showFooter(true);
   if (props.creek) {
     const photos = props.creek.img.map((img, index) => {
       return { photo: img, number: index + 1 };

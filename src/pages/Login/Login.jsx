@@ -2,7 +2,8 @@ import React from 'react';
 import LoginForm from '../../components/LoginForm/LoginForm'
 import './Login.scss';
 
-const Login = () => {
+const Login = ({ showFooter }) => {
+  showFooter(true);
   return (
     <main>
       {/* <div className='wrapper'>

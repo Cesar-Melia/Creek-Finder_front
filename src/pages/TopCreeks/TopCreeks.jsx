@@ -3,7 +3,8 @@ import { CreekCard } from '../../components';
 
 import './TopCreeks.scss';
 
-const TopCreeks = ({ creeks }) => {
+const TopCreeks = ({ creeks, showFooter }) => {
+  showFooter(true);
   return (
     <div className='top-creeks'>
       <div className='top-creeks__title'>

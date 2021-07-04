@@ -4,7 +4,8 @@ import './Creeks.scss';
 
 let creeksSelection;
 
-const Creeks = ({ creeks }) => {
+const Creeks = ({ creeks, showFooter }) => {
+  showFooter(true);
   const [searchParam, setSearchParam] = useState();
   const [searchValue, setSearchValue] = useState();
 

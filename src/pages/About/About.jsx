@@ -2,7 +2,8 @@ import React from 'react';
 
 import './About.scss'
 
-const About = () => {
+const About = ({ showFooter }) => {
+    showFooter(true);
     return (
         <div className="about-container">
             <div className="about-container__card">
