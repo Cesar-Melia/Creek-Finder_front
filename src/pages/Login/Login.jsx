@@ -5,10 +5,11 @@ import './Login.scss';
 const Login = () => {
   return (
     <main>
-      <div className='wrapper'>
+      {/* <div className='wrapper'>
         <div className='wave'></div>
-        <LoginForm />
-      </div>
+        
+      </div> */}
+      <LoginForm />
     </main>
   );
 };

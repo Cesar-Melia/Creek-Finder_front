@@ -19,20 +19,23 @@ const LoginForm = () => {
 
   }
   return (
-    <div className="form-container">
-      <h2>Creek Finder</h2>
-      <form onSubmit={submitForm} className="form-container__form">
-        <label >
-          <p>Email</p>
-          <input type="email" name="email" />
-        </label>
-        <label >
-          <p>Contraseña</p>
-          <input type="password" name="password" />
-        </label>
-        <button type="submit" className="btn btn-outline-primary">Iniciar sesión</button>
-      </form>
+    <div className="login-container">
+      <div className="login-container__main">
+        <h2>Creek Finder</h2>
+        <form onSubmit={submitForm} className="login-container__form">
+          <label >
+            <p>Email</p>
+            <input type="email" name="email" />
+          </label>
+          <label >
+            <p>Contraseña</p>
+            <input type="password" name="password" />
+          </label>
+          <button type="submit" className="btn btn-outline-primary">Iniciar sesión</button>
+        </form>
+      </div>
     </div>
+
 
   )
 }

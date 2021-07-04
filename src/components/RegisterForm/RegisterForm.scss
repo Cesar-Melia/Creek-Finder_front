@@ -1,21 +1,20 @@
 .register-container{
-  // border: 1px solid red;
-  margin-top:80px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding :35px;
-  background-image: url('https://media.giphy.com/media/1LAArSrLLApVu/giphy.gif');
+  background-image: url('https://res.cloudinary.com/creek-finder/image/upload/v1625397736/register_background_kfahn5.jpg');
   background-position: initial;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   
 
   &__main{
+    margin-top:120px;
     border: 3px solid rgba(160, 160, 160, 0.637);
     border-radius: 5%;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    background-color:white;
+    background-color:rgba(255, 255, 255, 0.87);
     width: 500px;
     height: 500px;
     display: flex;
