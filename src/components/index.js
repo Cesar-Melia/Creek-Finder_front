@@ -11,6 +11,7 @@ import ListButton from './ListButton/ListButton';
 import CreekFilterNav from './CreekFilterNav/CreekFilterNav';
 import CarouselComp from './CarouselComp/CarouselComp';
 import Footer from './Footer/Footer'
+import Comments from './Comments/Comments'
 
 export {
   MapImage,
@@ -25,5 +26,6 @@ export {
   ListButton,
   CreekFilterNav,
   CarouselComp,
-  Footer
+  Footer,
+  Comments
 };

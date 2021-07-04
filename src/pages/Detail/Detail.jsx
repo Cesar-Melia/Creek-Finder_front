@@ -1,5 +1,6 @@
 import { BackButton } from '../../components';
 import { ImgGallery } from '../../components';
+import { Comments } from '../../components';
 import Weather from '../../components/Weather/Weather';
 
 import './Detail.scss';
@@ -19,6 +20,7 @@ const Detail = (props) => {
           <h4 className='detail__type'>Playa de {props.creek.type}</h4>
           <p className='detail__description'>{props.creek.description}</p>
         </div>
+        <Comments />
         <BackButton text='Volver' />
         <Weather lat={props.creek.lat} lng={props.creek.lng} />
       </main>
