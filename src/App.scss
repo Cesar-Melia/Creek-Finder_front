@@ -1,12 +1,12 @@
-.app {
-  text-align: center;
+@font-face {
+  font-family: 'lato';
+  src: url('./assets/fonts/Lato/Lato-Regular.ttf'), url('./assets/fonts/Lato/Lato-Bold.ttf'),
+    url('./assets/fonts/Lato/Lato-Italic.ttf');
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@font-face {
+  font-family: 'lullabies';
+  src: url('./assets/fonts/Lullabies/Lullabies-Reg.ttf');
 }
 
 :root {
@@ -27,4 +27,19 @@ main {
   --color-light-black: #202020;
   --color-black: #000000;
   --color-transparent-white: rgba(255, 255, 255, 0.8);
+}
+
+.app {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: 'lato';
 }
