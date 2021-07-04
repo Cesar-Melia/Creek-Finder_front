@@ -51,7 +51,7 @@ const App = () => {
           <Suspense fallback={<div>Lazy Loading</div>}>
             <Switch>
               <Route exact path='/' component={(props) => <Home {...props} creeks={creeks} showFooter={showFooter} />} />
-              <Route exact path='/about' component={(props) => <About {...props} />} showFooter={showFooter} />
+              <Route exact path='/about' component={(props) => <About {...props} showFooter={showFooter} />} />
               <Route exact path='/creeks' component={(props) => <Creeks {...props} creeks={creeks} showFooter={showFooter} />} />
               <Route exact path='/top-creeks' component={(props) => <TopCreeks {...props} creeks={creeks} showFooter={showFooter} />} />
               <Route exact path='/map' component={(props) => <Map {...props} creeks={creeks} showFooter={showFooter} />} />
