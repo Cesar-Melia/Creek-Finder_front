@@ -13,8 +13,8 @@ const Navbar = () => {
             <img src={Logo} alt='Logo' className='nav__left' />
           </NavLink>
         </div>
-        <nav className='nav__right'>
-          <ul>
+        <nav>
+          <ul className='nav__right'>
             <li>
               <NavLink exact to='/creeks' activeClassName='active' className='nav__link'>
                 Calas
@@ -31,12 +31,12 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink exact to='/login' activeClassName='active' className='nav__link nav__link--auth'>
+              <NavLink exact to='/login' activeClassName='active-auth' className='nav__link nav__link--auth'>
                 Login
               </NavLink>
             </li>
             <li>
-              <NavLink exact to='/register' activeClassName='active' className='nav__link nav__link--auth'>
+              <NavLink exact to='/register' activeClassName='active-auth' className='nav__link nav__link--auth'>
                 Registro
               </NavLink>
             </li>

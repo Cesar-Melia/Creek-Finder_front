@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   z-index: 2;
-  border-bottom: 1px solid var(--color-blue-dark);
+  border-bottom: 1px solid var(--color-blue-logo);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,34 +15,40 @@
     align-items: center;
     width: 100%;
     max-width: 1100px;
+    margin: 0 15px 0 5px;
   }
 
   &__right {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-right: 20px;
   }
 
   img {
     width: 150px;
     margin: 5px 0;
   }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
 
   li {
     display: inline;
+    list-style: none;
   }
 
   &__link {
     text-decoration: none;
-    color: var(--color-blue-dark);
+    color: var(--color-blue-logo);
     font-size: 20px;
-    margin: 0 16px;
+    margin: 0 20px;
+    position: relative;
 
     &--auth {
       font-size: 14px;
-      color: var(--color-blue-dark);
-      margin: 0 5px;
+      color: var(--color-blue-logo);
+      margin-left: 5px;
     }
 
     &--last {
@@ -50,15 +56,32 @@
     }
 
     &:hover {
-      color: var(--color-light-black);
+      color: var(--color-blue-dark);
       text-shadow: none;
-      //   text-decoration: none;
+      text-decoration: none;
     }
   }
 }
 
 .active {
-  color: var(--color-light-black);
+  color: var(--color-blue-dark);
   text-shadow: none;
-  text-decoration: underline;
+  // text-decoration: underline;
+  &::before {
+    content: '';
+    display: block;
+    background: url('../../assets/line.svg') no-repeat;
+    width: 90px;
+    height: 15px;
+    position: absolute;
+    bottom: -18px;
+    left: -8px;
+    // float: right;
+    margin: 0 !important;
+  }
+}
+
+.active-auth {
+  color: var(--color-blue-dark);
+  text-shadow: none;
 }
