@@ -20,7 +20,7 @@ const Detail = (props) => {
           <h4 className='detail__type'>Playa de {props.creek.type}</h4>
           <p className='detail__description'>{props.creek.description}</p>
         </div>
-        <Comments />
+        <Comments creek={props.creek} />
         <BackButton text='Volver' />
         <Weather lat={props.creek.lat} lng={props.creek.lng} />
       </main>

@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import './Comments.scss'
+const BASE_URL = 'http://localhost:3500';
+const Comments = ({ creek }) => {
 
-const Comments = () => {
+  const comments = creek.comments
   return (
-    <div>Commentarios</div>
+    <div>
+      {
+        comments.map((comment) => {
+          return (
+            <div>{comment.text}</div>
+          )
+        })
+      }
+    </div>
   )
 }
 
