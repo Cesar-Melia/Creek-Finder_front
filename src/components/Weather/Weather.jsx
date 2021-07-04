@@ -31,7 +31,7 @@ const Weather = ({ lat, lng }) => {
   return (
     <div className="weather-container">
       {weather.location.values.map((wtr, index) => {
-        if (index < 5) {
+        if (index < 8) {
           return (
             <WeatherCard key={JSON.stringify(wtr)} wtr={wtr} />
           )

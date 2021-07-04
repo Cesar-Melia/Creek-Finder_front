@@ -34,12 +34,14 @@ const WeatherCard = ({ wtr }) => {
 
   return (
     <div className='weather-card-container__card'>
+      <div className='weather-card-container__name'>{convertDateFormat(wtr.datetimeStr.substring(0, 10))}</div>
       <div className='weather-card-container__card-up'>
+
         <div className='weather-card-container__card-left'>
           <img src={icons[apiIcon]} alt='EL SOLACO' className='icon' />
         </div>
         <div className='weather-card-container__card-right'>
-          <p>{convertDateFormat(wtr.datetimeStr.substring(0, 10))}</p>
+
           <p className='weather-card-container__max'>{wtr.maxt}ºC</p>
           <p className='weather-card-container__min'>{wtr.mint}ºC</p>
         </div>

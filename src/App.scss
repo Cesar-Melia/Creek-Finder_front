@@ -9,6 +9,11 @@
   src: url('./assets/fonts/Lullabies/Lullabies-Reg.ttf');
 }
 
+@font-face {
+  font-family: 'exo';
+  src: urt('./assets/fonts/Exo/Exo-ExtraBold.ttf')
+}
+
 :root {
   --color-light-orange: #ffeccc;
   --color-orange: #fddfa6;
