@@ -27,10 +27,10 @@ const LoginForm = () => {
           <input type="email" name="email" />
         </label>
         <label >
-          <p>Password</p>
+          <p>Contraseña</p>
           <input type="password" name="password" />
         </label>
-        <button type="submit">Log in</button>
+        <button type="submit" className="btn btn-outline-primary">Iniciar sesión</button>
       </form>
     </div>
 
