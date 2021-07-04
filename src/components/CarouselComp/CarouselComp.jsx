@@ -10,7 +10,7 @@ const CarouselComp = ({ creeks }) => {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} className='carousel'>
+    <Carousel activeIndex={index} onSelect={handleSelect} touch='true' className='carousel'>
       {creeks.map((creek) => {
         return (
           <Carousel.Item interval={5000} key={JSON.stringify(creek)}>
