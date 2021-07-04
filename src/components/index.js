@@ -9,6 +9,7 @@ import CreekListItem from './CreekListItem/CreekListItem';
 import MapButton from './MapButton/MapButton';
 import ListButton from './ListButton/ListButton';
 import CreekFilterNav from './CreekFilterNav/CreekFilterNav';
+import CarouselComp from './CarouselComp/CarouselComp';
 
 export {
   MapImage,
@@ -22,4 +23,5 @@ export {
   MapButton,
   ListButton,
   CreekFilterNav,
+  CarouselComp,
 };
