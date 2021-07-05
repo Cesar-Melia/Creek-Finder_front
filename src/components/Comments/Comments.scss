@@ -1,0 +1,16 @@
+.comment-container{
+
+  margin: 20px;
+  width:100%;
+
+  &__comment{
+
+    margin: 20px;
+    min-height: 60px;
+    text-align: justify;
+    overflow: hidden;
+    border-bottom: 1px solid rgb(150, 227, 230);
+    color: var(--color-gray);
+    
+  }
+}

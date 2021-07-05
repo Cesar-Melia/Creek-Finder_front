@@ -18,4 +18,14 @@
   &__description {
     color: var(--color-gray);
   }
+
+  &__comment-title{
+    color: var(--color-blue-dark);
+  }
+
+  &__comments{
+    width: 70%;
+    display: flex;
+    margin: 20px;
+  }
 }
