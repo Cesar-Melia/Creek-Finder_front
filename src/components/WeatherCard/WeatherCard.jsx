@@ -13,7 +13,7 @@ import Cloudy from '../../assets/Cloudy.svg';
 
 import './WeatherCard.scss';
 
-const icons = {
+const ICONS = {
   Clear: Sun,
   Snow: Snow,
   Rain: Rain,
@@ -23,7 +23,7 @@ const icons = {
   Overcast: Cloudy,
 };
 
-const daysOfWeek = {
+const DAYS = {
   1: 'Lunes',
   2: 'Martes',
   3: 'Miércoles',
@@ -42,7 +42,7 @@ const WeatherCard = ({ wtr }) => {
 
   const date = new Date(wtr.datetime);
   const dayMonth = date.getDate();
-  const dayWeek = daysOfWeek[date.getDay()];
+  const dayWeek = DAYS[date.getDay()];
 
   return (
     <div className='weather-card-container__card'>
@@ -55,7 +55,7 @@ const WeatherCard = ({ wtr }) => {
 
       <div className='weather-card-container__card-up'>
         <div className='weather-card-container__card-left'>
-          <img src={icons[apiIcon]} alt='EL SOLACO' className='icon' />
+          <img src={ICONS[apiIcon]} alt='EL SOLACO' className='icon' />
         </div>
         <div className='weather-card-container__card-right'>
           <p className='weather-card-container__max'>{wtr.maxt}ºC</p>
