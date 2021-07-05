@@ -34,10 +34,6 @@ const DAYS = {
 };
 
 const WeatherCard = ({ wtr }) => {
-  const convertDateFormat = (string) => {
-    return string.split('-').reverse().join('-');
-  };
-
   const apiIcon = wtr.conditions;
 
   const date = new Date(wtr.datetime);
@@ -46,8 +42,6 @@ const WeatherCard = ({ wtr }) => {
 
   return (
     <div className='weather-card-container__card'>
-      {/* <div className='weather-card-container__name'>{convertDateFormat(wtr.datetimeStr.substring(0, 10))}</div> */}
-
       <div className='weather-card-container__name'>
         <span className='weather-card-container__day'>{dayWeek}</span>
         <span>{dayMonth}</span>
