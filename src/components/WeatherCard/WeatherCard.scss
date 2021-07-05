@@ -1,18 +1,4 @@
-
-.weather-card-container{
-
-  &__name{
-    margin-bottom: 20px;
-    font-family: exo;
-    box-shadow: 3px 3px 8px 5px rgba(51, 51, 51, 0.589);
-    border-radius: 20%;
-    width: 70%;
-    background-color:rgba(255, 255, 255, 0.198); 
-    border: 4px solid rgba(255, 255, 255, 0.198);
-    animation-name: carder;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-  }
+.weather-card-container {
   &__card {
     border: 2px solid rgba(60, 65, 109, 0.349);
     border-radius: 20%;
@@ -32,7 +18,7 @@
       0% {
         border-radius: 20%;
       }
-      
+
       50% {
         border-radius: 30%;
       }
@@ -40,17 +26,33 @@
         border-radius: 20%;
       }
     }
+
     animation-name: carder;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-  
+
     &:hover {
       background-color: var(--color-green);
-  
-      
     }
   }
-  
+
+  &__name {
+    margin-bottom: 20px;
+    // font-family: exo;
+    box-shadow: 0px 0px 8px 2px rgba(51, 51, 51, 0.589);
+    border-radius: 20%;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.198);
+    border: 4px solid rgba(255, 255, 255, 0.198);
+    animation-name: carder;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  &__day {
+    margin-right: 10px;
+  }
+
   &__card-up {
     border: 4px solid rgba(255, 255, 255, 0.198);
     display: flex;
@@ -60,7 +62,7 @@
     margin-bottom: 5px;
     width: 100%;
   }
-  
+
   &__card-down {
     // border:1px solid black;
     border: 4px solid rgba(255, 255, 255, 0.144);
@@ -69,23 +71,23 @@
     padding: 5px;
     width: 100%;
   }
-  
+
   &__card-left {
     // border:1px solid black;
     display: flex;
     align-items: center;
   }
-  
+
   &__card-right {
     // border:1px solid black;
     text-align: center;
   }
-  
+
   &__max {
     font-weight: bold;
     color: rgb(228, 64, 64);
   }
-  
+
   &__min {
     font-weight: bold;
     color: rgb(52, 52, 243);
@@ -93,7 +95,7 @@
   &__down-icon {
     width: 20px;
   }
-  
+
   p {
     margin: 0px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -110,6 +112,6 @@
   align-items: center;
 }
 
-p{
-  margin:0 5px !important;
+p {
+  margin: 0 5px !important;
 }

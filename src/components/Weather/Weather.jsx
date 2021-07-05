@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
 // import { divIcon } from 'leaflet'
 
-
-import WeatherCard from '../WeatherCard/WeatherCard'
+import WeatherCard from '../WeatherCard/WeatherCard';
 
 import './Weather.scss';
 
-
-
 const Weather = ({ lat, lng }) => {
-
   const [weather, setWeather] = useState({});
 
   useEffect(() => {
@@ -29,16 +25,13 @@ const Weather = ({ lat, lng }) => {
   }
 
   return (
-    <div className="weather-container">
+    <div className='weather-container'>
       {weather.location.values.map((wtr, index) => {
-        if (index < 8) {
-          return (
-            <WeatherCard key={JSON.stringify(wtr)} wtr={wtr} />
-          )
+        if (index < 7) {
+          return <WeatherCard key={JSON.stringify(wtr)} wtr={wtr} />;
         } else {
-          return null
+          return null;
         }
-
       })}
     </div>
   );
