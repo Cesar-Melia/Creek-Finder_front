@@ -1,6 +1,6 @@
 import { BackButton } from '../../components';
 import { ImgGallery, AddFavorite } from '../../components';
-import { Comments } from '../../components';
+import { CommentsList } from '../../components';
 import Weather from '../../components/Weather/Weather';
 
 import './Detail.scss';
@@ -29,7 +29,7 @@ const Detail = (props) => {
         <Weather lat={props.creek.lat} lng={props.creek.lng} />
         <h3 className='detail__comment-title'>Comentarios</h3>
         <div className='detail__comments'>
-          <Comments creekId={props.creek._id} />
+          <CommentsList creekId={props.creek._id} />
         </div>
       </main>
     );

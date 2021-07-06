@@ -5,7 +5,6 @@
   &__comment {
     display: flex;
     align-items: center;
-    margin: 20px;
     min-height: 60px;
     text-align: justify;
     overflow: hidden;
@@ -23,9 +22,24 @@
   &__user-img {
     width: 50px;
     border-radius: 50%;
+    margin-top: 10px;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100px;
+    margin-top: 20px;
   }
 
   &__text {
     font-size: 16px;
+  }
+
+  &__date {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 10px;
   }
 }

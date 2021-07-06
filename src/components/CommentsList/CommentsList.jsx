@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import InputComment from '../InputComment/InputComment';
+import { CommentsItem } from '../../components';
 
-import './Comments.scss';
+import './CommentsList.scss';
 
 const BASE_URL = 'http://localhost:3500';
 
@@ -26,17 +27,7 @@ const Comments = ({ creekId }) => {
       </div>
 
       {comments.map((comment) => {
-        return (
-          <div className='comment-container__comment' key={JSON.stringify(comment)}>
-            <div className='comment-container__user-block'>
-              <img src={comment.user.img} alt={comment.user.name} className='comment-container__user-img' />
-              <span>{comment.user.userName}</span>
-            </div>
-            <div className='comment-container__text'>
-              <p>{comment.text}</p>
-            </div>
-          </div>
-        );
+        return <CommentsItem comment={comment} />;
       })}
     </div>
   );
