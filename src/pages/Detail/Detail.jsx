@@ -29,7 +29,7 @@ const Detail = (props) => {
         <Weather lat={props.creek.lat} lng={props.creek.lng} />
         <h3 className='detail__comment-title'>Comentarios</h3>
         <div className='detail__comments'>
-          <Comments creek={props.creek} />
+          <Comments creekId={props.creek._id} />
         </div>
       </main>
     );
