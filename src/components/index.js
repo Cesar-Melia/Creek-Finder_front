@@ -10,8 +10,9 @@ import MapButton from './MapButton/MapButton';
 import ListButton from './ListButton/ListButton';
 import CreekFilterNav from './CreekFilterNav/CreekFilterNav';
 import CarouselComp from './CarouselComp/CarouselComp';
-import Footer from './Footer/Footer'
-import Comments from './Comments/Comments'
+import Footer from './Footer/Footer';
+import Comments from './Comments/Comments';
+import AddFavorite from './AddFavorite/AddFavorite';
 
 export {
   MapImage,
@@ -27,5 +28,6 @@ export {
   CreekFilterNav,
   CarouselComp,
   Footer,
-  Comments
+  Comments,
+  AddFavorite,
 };

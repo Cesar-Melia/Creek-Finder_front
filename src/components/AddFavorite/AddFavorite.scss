@@ -1,0 +1,15 @@
+.add-favorite {
+  &__text {
+    font-size: 15px;
+    margin-right: 10px;
+    color: var(--color-light-gray);
+  }
+
+  &__icon {
+    font-size: 14px;
+
+    &--red {
+      color: var(--color-red-heart);
+    }
+  }
+}

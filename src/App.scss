@@ -1,3 +1,5 @@
+@import './assets/fonts/icons/style.scss';
+
 @font-face {
   font-family: 'lato';
   src: url('./assets/fonts/Lato/Lato-Regular.ttf'), url('./assets/fonts/Lato/Lato-Bold.ttf'),
@@ -11,7 +13,7 @@
 
 @font-face {
   font-family: 'exo';
-  src: urt('./assets/fonts/Exo/Exo-ExtraBold.ttf')
+  src: urt('./assets/fonts/Exo/Exo-ExtraBold.ttf');
 }
 
 :root {
@@ -31,6 +33,7 @@
   --color-light-black: #202020;
   --color-black: #000000;
   --color-transparent-white: rgba(255, 255, 255, 0.8);
+  --color-red-heart: rgb(255, 103, 103);
 }
 
 .app {
@@ -46,4 +49,9 @@ main {
 
 body {
   font-family: 'lato';
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
