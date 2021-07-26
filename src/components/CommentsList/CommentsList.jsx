@@ -22,17 +22,16 @@ const Comments = ({ creekId }) => {
   }, [switcherComent]);
 
   const switchComments = () => {
-    setSwitcherComent(!switcherComent)
-  }
-
+    setSwitcherComent(!switcherComent);
+  };
 
   return (
     <div className='comment-container'>
       <div>
-        <InputComment creekId={creekId} setSwitcherComent={setSwitcherComent} />
+        <InputComment creekId={creekId} setSwitcherComent={switchComments} />
       </div>
 
-      {comments.map((comment) => {
+      {comments.map(comment => {
         return <CommentsItem comment={comment} />;
       })}
     </div>
