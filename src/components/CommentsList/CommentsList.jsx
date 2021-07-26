@@ -18,7 +18,7 @@ const Comments = ({ creekId }) => {
     };
 
     getComments();
-  });
+  }, []);
 
   return (
     <div className='comment-container'>
