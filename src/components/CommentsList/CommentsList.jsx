@@ -8,6 +8,7 @@ const BASE_URL = 'http://localhost:3500';
 
 const Comments = ({ creekId }) => {
   const [comments, setComments] = useState([]);
+  const [switcherComent, setSwitcherComent] = useState(false);
 
   useEffect(() => {
     const getComments = async () => {
@@ -18,12 +19,17 @@ const Comments = ({ creekId }) => {
     };
 
     getComments();
-  }, []);
+  }, [switcherComent]);
+
+  const switchComments = () => {
+    setSwitcherComent(!switcherComent)
+  }
+
 
   return (
     <div className='comment-container'>
       <div>
-        <InputComment />
+        <InputComment creekId={creekId} setSwitcherComent={setSwitcherComent} />
       </div>
 
       {comments.map((comment) => {
