@@ -7,17 +7,18 @@ import { logout } from '../../api/auth.api';
 import './Navbar.scss';
 
 const Navbar = () => {
-  let user = useContext(UserContext);
+  const session = useContext(UserContext);
+  const [user, setUser] = useState(session);
 
   console.log('usuario: ', user);
 
-  // useEffect(() => {
-  //   setUser(session);
-  // }, [session]);
+  useEffect(() => {
+    setUser(session);
+  }, [session]);
 
   const logoutUser = () => {
     logout();
-    // user = null;
+    setUser(null);
   };
 
   return (
@@ -45,19 +46,25 @@ const Navbar = () => {
                 Top 10
               </NavLink>
             </li>
-            <li>
-              <NavLink to='/login' activeClassName='active-auth' className='nav__link nav__link--auth'>
-                Login
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/register' activeClassName='active-auth' className='nav__link nav__link--auth'>
-                Registro
-              </NavLink>
-            </li>
-            <li>
-              <button onClick={logoutUser}>Logout</button>
-            </li>
+            {!user && (
+              <li>
+                <NavLink to='/login' activeClassName='active-auth' className='nav__link nav__link--auth'>
+                  Login
+                </NavLink>
+              </li>
+            )}
+            {user === null && (
+              <li>
+                <NavLink to='/register' activeClassName='active-auth' className='nav__link nav__link--auth'>
+                  Registro
+                </NavLink>
+              </li>
+            )}
+            {user && (
+              <li>
+                <button onClick={logoutUser}>Logout</button>
+              </li>
+            )}
             {user && (
               <li>
                 <img src={user.img} alt={user.userName} />
