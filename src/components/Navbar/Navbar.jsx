@@ -9,34 +9,46 @@ const Navbar = () => {
     <header className='nav'>
       <div className='nav__content'>
         <div className='nav__left'>
-          <Link exact to='/' className='nav__link'>
+          <Link to='/' className='nav__link'>
             <img src={Logo} alt='Logo' className='nav__left' />
           </Link>
         </div>
         <nav>
           <ul className='nav__right'>
             <li>
-              <NavLink exact to='/creeks' activeClassName='active-item' className='nav__link'>
+              <NavLink to='/creeks' activeClassName='active-item' className='nav__link'>
                 Calas
               </NavLink>
             </li>
             <li>
-              <NavLink exact to='/map' activeClassName='active-item' className='nav__link'>
+              <NavLink to='/map' activeClassName='active-item' className='nav__link'>
                 Mapa
               </NavLink>
             </li>
             <li>
-              <NavLink exact to='/top-creeks' activeClassName='active-item' className='nav__link nav__link--last'>
+              <NavLink
+                to='/top-creeks'
+                activeClassName='active-item'
+                className='nav__link nav__link--last'
+              >
                 Top 10
               </NavLink>
             </li>
             <li>
-              <NavLink exact to='/login' activeClassName='active-auth' className='nav__link nav__link--auth'>
+              <NavLink
+                to='/login'
+                activeClassName='active-auth'
+                className='nav__link nav__link--auth'
+              >
                 Login
               </NavLink>
             </li>
             <li>
-              <NavLink exact to='/register' activeClassName='active-auth' className='nav__link nav__link--auth'>
+              <NavLink
+                to='/register'
+                activeClassName='active-auth'
+                className='nav__link nav__link--auth'
+              >
                 Registro
               </NavLink>
             </li>
