@@ -108,7 +108,7 @@ const App = () => {
                   <UserPanel />
                 </Route>
                 <Route exact={true} path='/favorite-creeks'>
-                  <FavoriteCreeks />
+                  <FavoriteCreeks showFooter={showFooter} />
                 </Route>
               </Switch>
             </Suspense>
