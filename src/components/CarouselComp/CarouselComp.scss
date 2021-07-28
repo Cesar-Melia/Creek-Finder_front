@@ -4,16 +4,18 @@
   &__img {
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     object-fit: cover;
     object-position: center;
   }
 
-  // &__name {
-  //   font-family: 'Times New Roman', Times, serif;
-  //   font-size: 150px;
-  //   color: rgba(255, 255, 255, 0.924);
-  //   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3d7f889a, 0 0 40px #3d7f889a, 0 0 50px #3d7f889a,
-  //     0 0 60px #3d7f889a, 0 0 70px #3d7f889a;
-  // }
+  &__title {
+    font-size: 50px;
+    text-shadow: 0px 0px 5px var(--color-blue-logo);
+  }
+
+  &__subtitle {
+    font-size: 25px;
+    text-shadow: 0px 0px 3px var(--color-blue-logo);
+  }
 }
