@@ -19,6 +19,7 @@ const Login = lazy(() => import('./pages/Login/Login'));
 const Register = lazy(() => import('./pages/Register/Register'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 const UserPanel = lazy(() => import('./pages/UserPanel/UserPanel'));
+const FavoriteCreeks = lazy(() => import('./pages/FavoriteCreeks/FavoriteCreeks'))
 
 export const UserContext = React.createContext(null);
 
@@ -107,6 +108,9 @@ const App = () => {
                 />
                 <Route exact={true} path='/user-panel'>
                   <UserPanel />
+                </Route>
+                <Route exact={true} path='/favorite-creeks'>
+                  <FavoriteCreeks />
                 </Route>
               </Switch>
             </Suspense>
