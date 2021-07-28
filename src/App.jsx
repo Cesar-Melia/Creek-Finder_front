@@ -19,7 +19,7 @@ const Login = lazy(() => import('./pages/Login/Login'));
 const Register = lazy(() => import('./pages/Register/Register'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 const UserPanel = lazy(() => import('./pages/UserPanel/UserPanel'));
-const FavoriteCreeks = lazy(() => import('./pages/FavoriteCreeks/FavoriteCreeks'))
+const FavoriteCreeks = lazy(() => import('./pages/FavoriteCreeks/FavoriteCreeks'));
 
 export const UserContext = React.createContext(null);
 
@@ -60,7 +60,7 @@ const App = () => {
     <>
       {/* <Normalize /> */}
       <Router>
-        <UserContext.Provider value={{ user, saveUser, creeks }}>
+        <UserContext.Provider value={{ user, saveUser, getUser, creeks }}>
           <div>
             <Navbar />
             <Suspense fallback={<div>Lazy Loading</div>}>

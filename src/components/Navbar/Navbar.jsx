@@ -11,8 +11,6 @@ const Navbar = () => {
   const { user, saveUser } = useContext(UserContext);
   const history = useHistory();
 
-  console.log('usuario: ', user);
-
   const logoutUser = async () => {
     const res = await logout();
     if (res.ok) {

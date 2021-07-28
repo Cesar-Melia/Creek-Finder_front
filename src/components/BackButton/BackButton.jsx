@@ -1,9 +1,7 @@
 import { withRouter } from 'react-router-dom';
 import './BackButton.scss';
 
-const BackButton = (props) => {
-  console.log(props);
-
+const BackButton = props => {
   return (
     <button
       onClick={() => {

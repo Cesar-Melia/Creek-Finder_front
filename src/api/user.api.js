@@ -1,6 +1,6 @@
 const BASE_URL = 'http://localhost:3500';
-const addFavoriteUrl = `${BASE_URL}/users/add-favorite/`;
-const deleteFavoriteUrl = `${BASE_URL}/users/delete-favorite/`;
+const addFavoriteUrl = `${BASE_URL}/users/add-favorite`;
+const deleteFavoriteUrl = `${BASE_URL}/users/delete-favorite`;
 
 export const addFavorite = async creekId => {
   const requestOptions = {
@@ -10,9 +10,10 @@ export const addFavorite = async creekId => {
   };
 
   let res = await fetch(`${addFavoriteUrl}/${creekId}`, requestOptions);
-  let user = await res.json();
+  let resData = await res.json();
 
-  return user;
+  console.log('resData from API (Add): ', resData);
+  return resData;
 };
 
 export const deleteFavorite = async creekId => {
@@ -23,9 +24,10 @@ export const deleteFavorite = async creekId => {
   };
 
   let res = await fetch(`${deleteFavoriteUrl}/${creekId}`, requestOptions);
-  let user = await res.json();
+  let resData = await res.json();
 
-  return user;
+  console.log('resData from API (Delete): ', resData);
+  return resData;
 };
 
 export const editUser = async form => {
