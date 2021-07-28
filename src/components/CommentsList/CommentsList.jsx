@@ -1,27 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { CommentsItem, InputComment } from '../../components';
+import { getComments } from '../../api/comments.api';
 
 import './CommentsList.scss';
 
-const BASE_URL = 'http://localhost:3500';
-
 const Comments = ({ creekId }) => {
   const [comments, setComments] = useState([]);
-  const [switcherComent, setSwitcherComent] = useState(false);
+  const [switcherComment, setSwitcherComent] = useState(false);
 
   useEffect(() => {
-    const getComments = async () => {
-      const res = await fetch(`${BASE_URL}/comments/${creekId}`);
-      const resData = await res.json();
-
-      setComments(resData);
+    const getCommentsData = async () => {
+      setComments(await getComments(creekId));
     };
 
-    getComments();
-  }, [switcherComent]);
+    getCommentsData();
+  }, [switcherComment]);
 
   const switchComments = () => {
-    setSwitcherComent(!switcherComent);
+    setSwitcherComent(!switcherComment);
   };
 
   return (
