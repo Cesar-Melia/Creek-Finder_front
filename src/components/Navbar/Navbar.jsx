@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext } from 'react';
 import Logo from '../../assets/logo_beach_300.png';
 import { NavLink, Link } from 'react-router-dom';
 import { UserContext } from '../../App';
@@ -21,9 +21,8 @@ const Navbar = () => {
     if (res.ok) {
       saveUser(null);
     } else {
-      console.log('No te has deslogueado')
+      console.log('No te has deslogueado');
     }
-
   };
 
   return (

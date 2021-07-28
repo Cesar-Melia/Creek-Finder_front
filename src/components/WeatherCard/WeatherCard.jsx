@@ -59,15 +59,15 @@ const WeatherCard = ({ wtr }) => {
       <div className='weather-card-container__card-down'>
         <div className='span'>
           <p>{wtr.humidity}%</p>
-          <img src={Humidity} className='weather-card-container__down-icon' />
+          <img src={Humidity} className='weather-card-container__down-icon' alt='humedad' />
         </div>
         <div className='span'>
           <p>{wtr.wspd}km/h</p>
-          <img src={Viento} className='weather-card-container__down-icon' />
+          <img src={Viento} className='weather-card-container__down-icon' alt='viento' />
         </div>
         <div className='span'>
           <p>{wtr.wgust}km/h</p>
-          <img src={WS} className='weather-card-container__down-icon' />
+          <img src={WS} className='weather-card-container__down-icon' alt='rachas' />
         </div>
       </div>
     </div>

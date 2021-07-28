@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-
-
 const UserEdit = () => {
   const BASE_URL = 'http://localhost:3500';
 
@@ -15,7 +13,7 @@ const UserEdit = () => {
       credentials: 'include',
     };
 
-    const res = await fetch(`${BASE_URL}/users/edit/logged`, requestOptions);
+    return await fetch(`${BASE_URL}/users/edit/logged`, requestOptions);
   };
 
   const setPreview = event => {
@@ -44,11 +42,7 @@ const UserEdit = () => {
   };
 
   return (
-    <form
-      onSubmit={submitForm}
-      style={{ marginTop: '200px' }}
-      encType='multipart/form-data'
-    >
+    <form onSubmit={submitForm} style={{ marginTop: '200px' }} encType='multipart/form-data'>
       <input type='text' name='userName' />
       <input type='file' name='img' onChange={setPreview} />
       <input type='submit' value='Enviar' />
