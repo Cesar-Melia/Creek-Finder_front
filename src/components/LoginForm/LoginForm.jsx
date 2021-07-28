@@ -1,9 +1,13 @@
 import { useHistory } from 'react-router-dom';
+import { useContext } from 'react'
+import { UserContext } from '../../App';
 
 import './LoginForm.scss';
 
 const BASE_URL = 'http://localhost:3500';
+
 const LoginForm = () => {
+  const { saveUser } = useContext(UserContext);
   const history = useHistory();
 
   const submitForm = async (ev) => {
@@ -26,9 +30,11 @@ const LoginForm = () => {
       const us = await fetch(`${BASE_URL}/auth/login`, requestOptions);
       const usData = await us.json();
 
+      console.log(us);
       console.log('respuesta fetch', usData);
 
-      if (!usData.status) {
+      if (us.ok) {
+        saveUser(usData)
         history.push('/');
       }
     } catch (error) {

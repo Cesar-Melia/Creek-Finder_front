@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import { UserContext } from '../../App';
 
 import './RegisterForm.scss';
 
 const BASE_URL = 'http://localhost:3500';
 
 const RegisterForm = () => {
+  const { saveUser } = useContext(UserContext);
   const history = useHistory();
 
   const submitForm = async (ev) => {
@@ -30,8 +32,9 @@ const RegisterForm = () => {
 
       console.log('respuesta fetch REGISTRO', usData);
 
-      if (!usData.status || usData !== {}) {
-        history.push('/login');
+      if (us.ok) {
+        saveUser(usData);
+        history.push('/');
       }
     } catch (error) {
       console.log('Error en el fetch', error.message);

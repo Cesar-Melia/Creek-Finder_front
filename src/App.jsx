@@ -57,12 +57,15 @@ const App = () => {
       console.log('error get user data (check session)', error);
     }
   };
+  const saveUser = (user) => setUser(user);
+
+
 
   return (
     <>
       {/* <Normalize /> */}
       <Router>
-        <UserContext.Provider value={user}>
+        <UserContext.Provider value={{ user, saveUser }}>
           <div>
             <Navbar />
             <Suspense fallback={<div>Lazy Loading</div>}>

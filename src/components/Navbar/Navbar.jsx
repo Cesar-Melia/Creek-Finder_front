@@ -7,18 +7,23 @@ import { logout } from '../../api/auth.api';
 import './Navbar.scss';
 
 const Navbar = () => {
-  const session = useContext(UserContext);
-  const [user, setUser] = useState(session);
+  const { user, saveUser } = useContext(UserContext);
+  // const [user, setUser] = useState(session);
 
   console.log('usuario: ', user);
 
-  useEffect(() => {
-    setUser(session);
-  }, [session]);
+  // useEffect(() => {
+  //   setUser(session);
+  // }, [session]);
 
-  const logoutUser = () => {
-    logout();
-    setUser(null);
+  const logoutUser = async () => {
+    const res = await logout();
+    if (res.ok) {
+      saveUser(null);
+    } else {
+      console.log('No te has deslogueado')
+    }
+
   };
 
   return (

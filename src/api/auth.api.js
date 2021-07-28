@@ -16,13 +16,11 @@ export const CheckSession = async () => {
 };
 
 export const logout = async () => {
-  console.log('logout...');
-
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     credentials: 'include',
   };
 
-  await fetch(logoutUrl, requestOptions);
+  return await fetch(logoutUrl, requestOptions);
 };
