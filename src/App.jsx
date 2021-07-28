@@ -60,7 +60,7 @@ const App = () => {
     <>
       {/* <Normalize /> */}
       <Router>
-        <UserContext.Provider value={{ user, saveUser, getUser, creeks }}>
+        <UserContext.Provider value={{ user, creeks, saveUser, getUser }}>
           <div>
             <Navbar />
             <Suspense fallback={<div>Lazy Loading</div>}>
