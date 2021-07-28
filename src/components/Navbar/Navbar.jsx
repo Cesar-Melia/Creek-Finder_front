@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className='nav__content'>
         <div className='nav__left'>
           <Link to='/' className='nav__link'>
-            <img src={Logo} alt='Logo' className='nav__left' />
+            <img src={Logo} alt='Logo' className='nav__logo' />
           </Link>
         </div>
         <nav>
@@ -64,14 +64,17 @@ const Navbar = () => {
                 </NavLink>
               </li>
             )}
+            {user && <li></li>}
             {user && (
               <li>
-                <button onClick={logoutUser}>Logout</button>
-              </li>
-            )}
-            {user && (
-              <li>
-                <img src={user.img} alt={user.userName} />
+                <div className='nav__user'>
+                  <NavLink to='/user-panel'>
+                    <img src={user.img} alt={user.userName} className='nav__user-img' />
+                  </NavLink>
+                  <span onClick={logoutUser} className='nav__link nav__link--auth'>
+                    Logout
+                  </span>
+                </div>
               </li>
             )}
           </ul>
