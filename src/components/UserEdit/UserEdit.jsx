@@ -6,6 +6,7 @@ const UserEdit = () => {
   const { user } = useContext(UserContext);
   const BASE_URL = 'http://localhost:3500';
 
+
   const [imgPreview, setImgPreview] = useState(null);
 
   const sendUserToApi = async form => {
@@ -47,22 +48,26 @@ const UserEdit = () => {
   };
 
   return (
-    <form
-      onSubmit={submitForm}
-      style={{ marginTop: '200px' }}
-      encType='multipart/form-data'
-    >
+    <>
       {user && (
-        <div>
+        <form
+          onSubmit={submitForm}
+          style={{ marginTop: '200px' }}
+          encType='multipart/form-data'
+        >
+
+
           {imgPreview ? <img src={imgPreview} alt='preview' /> : <img src={user.img} alt='imagenUsuario' />}
-          <input type='text' name='userName' value={user.userName} />
+
+          <input type='text' name='userName' defaultValue={user.userName} />
           <input type='password' name='password' placeholder="Nueva Contraseña" />
-          <input type='email' name='email' value={user.email} />
+          <input type='email' name='email' defaultValue={user.email} />
           <input type='file' name='img' onChange={setPreview} />
-          <input type='submit' value='Enviar' />
-        </div>
+          <input type='submit' value='Editar' />
+
+        </form>
       )}
-    </form>
+    </>
   );
 };
 
