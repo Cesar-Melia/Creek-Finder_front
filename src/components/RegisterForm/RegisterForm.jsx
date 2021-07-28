@@ -48,15 +48,15 @@ const RegisterForm = () => {
         <form onSubmit={submitForm} className='register-container__form'>
           <label>
             <p>Nombre de usuario</p>
-            <input type='text' name='userName' />
+            <input type='text' name='userName' maxlength="15" minlength="2" required />
           </label>
           <label>
             <p>Email</p>
-            <input type='email' name='email' />
+            <input type='email' name='email' required />
           </label>
           <label>
             <p>Contraseña</p>
-            <input type='password' name='password' />
+            <input type='password' name='password' minlength="8" pattern="(?=.*\d)(?=.*[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ].*" title="Tu contraseña tiene que tener 8 caracteres ( 1 mayuscula y  1 numero)" />
           </label>
           <button className='btn btn-outline-primary'>Registrate!</button>
         </form>

@@ -32,10 +32,6 @@ const UserEdit = () => {
   };
 
   const submitForm = event => {
-    // const form = {
-    //   userName: event.target.userName.value,
-    //   img: event.target.img.value,
-    // };
 
     const form = new FormData();
     form.append('userName', event.target.userName.value);
@@ -59,8 +55,8 @@ const UserEdit = () => {
 
           {imgPreview ? <img src={imgPreview} alt='preview' /> : <img src={user.img} alt='imagenUsuario' />}
 
-          <input type='text' name='userName' defaultValue={user.userName} />
-          <input type='password' name='password' placeholder="Nueva Contraseña" />
+          <input type='text' name='userName' defaultValue={user.userName} maxlength="15" />
+          <input type='password' name='password' placeholder="Nueva Contraseña" minlength="8" pattern="(?=.*\d)(?=.*[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ].*" title="Tu contraseña tiene que tener 8 caracteres ( 1 mayuscula y  1 numero)" />
           <input type='email' name='email' defaultValue={user.email} />
           <input type='file' name='img' onChange={setPreview} />
           <input type='submit' value='Editar' />
