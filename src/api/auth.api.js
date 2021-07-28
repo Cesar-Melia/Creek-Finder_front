@@ -2,7 +2,7 @@ const BASE_URL = 'http://localhost:3500';
 const checkSessionUrl = `${BASE_URL}/users/logged`;
 const logoutUrl = `${BASE_URL}/auth/logout`;
 
-export const CheckSession = async () => {
+export const checkSession = async () => {
   const requestOptions = {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import InputComment from '../InputComment/InputComment';
-import { CommentsItem } from '../../components';
+import { CommentsItem, InputComment } from '../../components';
 
 import './CommentsList.scss';
 

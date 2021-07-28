@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { divIcon } from 'leaflet'
-
-import WeatherCard from '../WeatherCard/WeatherCard';
+import { WeatherCard } from '../../components';
 
 import './Weather.scss';
 
@@ -18,7 +16,7 @@ const Weather = ({ lat, lng }) => {
     };
 
     getWeather();
-  }, []);
+  }, [lat, lng]);
 
   if (!weather.location && lat && lng) {
     return <div>Cargando...</div>;

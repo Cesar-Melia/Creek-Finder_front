@@ -2,7 +2,7 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar } from './components';
 import { Footer } from './components';
-import { CheckSession } from './api/auth.api';
+import { checkSession } from './api/auth.api';
 import { getCreeks } from './api/creeks.api';
 
 // import Normalize from 'react-normalize';
@@ -47,21 +47,19 @@ const App = () => {
 
   const getUser = async () => {
     try {
-      const session = await CheckSession();
+      const session = await checkSession();
       setUser(session);
     } catch (error) {
       console.log('error get user data (check session)', error);
     }
   };
-  const saveUser = (user) => setUser(user);
-
-
+  const saveUser = user => setUser(user);
 
   return (
     <>
       {/* <Normalize /> */}
       <Router>
-        <UserContext.Provider value={{ user, saveUser }}>
+        <UserContext.Provider value={{ user, saveUser, creeks }}>
           <div>
             <Navbar />
             <Suspense fallback={<div>Lazy Loading</div>}>
