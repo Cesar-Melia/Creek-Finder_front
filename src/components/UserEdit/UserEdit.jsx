@@ -52,13 +52,16 @@ const UserEdit = () => {
       style={{ marginTop: '200px' }}
       encType='multipart/form-data'
     >
-      <input type='text' name='userName' value={user.userName} />
-      <input type='password' name='password' placeholder="Nueva Contraseña" />
-      <input type='email' name='email' value={user.email} />
-      <input type='file' name='img' onChange={setPreview} />
-      <input type='submit' value='Enviar' />
-
-      {imgPreview && <img src={imgPreview} alt='preview' />}
+      {user && (
+        <div>
+          {imgPreview ? <img src={imgPreview} alt='preview' /> : <img src={user.img} alt='imagenUsuario' />}
+          <input type='text' name='userName' value={user.userName} />
+          <input type='password' name='password' placeholder="Nueva Contraseña" />
+          <input type='email' name='email' value={user.email} />
+          <input type='file' name='img' onChange={setPreview} />
+          <input type='submit' value='Enviar' />
+        </div>
+      )}
     </form>
   );
 };
