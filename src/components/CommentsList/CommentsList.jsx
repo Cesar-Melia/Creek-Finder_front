@@ -26,7 +26,7 @@ const Comments = ({ creekId }) => {
   };
 
   return (
-    <div className='comment-container'>
+    <div className='comment-list'>
       <div>
         <InputComment creekId={creekId} setSwitcherComent={switchComments} />
       </div>

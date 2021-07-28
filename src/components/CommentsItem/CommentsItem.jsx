@@ -1,3 +1,5 @@
+import './CommentsItem.scss';
+
 const CommentsItem = ({ comment }) => {
   const date = new Date(comment.date);
 
@@ -6,9 +8,12 @@ const CommentsItem = ({ comment }) => {
   }-${date.getFullYear()} (${date.getHours()}:${date.getMinutes()})`;
 
   return (
-    <div className='comment-container__comment' key={JSON.stringify(comment)}>
+    <div className='comment-container' key={JSON.stringify(comment)}>
       <div className='comment-container__user-block'>
-        <img src={comment.user.img} alt={comment.user.name} className='comment-container__user-img' />
+        <div className='comment-container__user-round-img'>
+          <img src={comment.user.img} alt={comment.user.name} className='comment-container__user-img' />
+        </div>
+
         <span>{comment.user.userName}</span>
       </div>
       <div className='comment-container__text-block'>
