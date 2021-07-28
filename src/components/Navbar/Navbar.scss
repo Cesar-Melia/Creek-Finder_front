@@ -26,10 +26,23 @@
     align-items: center;
   }
 
-  img {
+  &__logo {
     width: 150px;
     margin: 5px 0;
   }
+
+  &__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__user-img {
+    width: 40px;
+    border-radius: 50%;
+  }
+
   ul {
     padding: 0;
     margin: 0;
@@ -50,9 +63,9 @@
 
     &--auth {
       font-family: 'lato';
-      font-size: 16px;
+      font-size: 14px;
       color: var(--color-blue-logo);
-      margin-left: 5px;
+      margin: 0 5px;
     }
 
     &--last {
@@ -63,6 +76,7 @@
       color: var(--color-blue-dark);
       text-shadow: none;
       text-decoration: none;
+      cursor: pointer;
     }
   }
 }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar } from './components';
 import { Footer } from './components';
 import { CheckSession } from './api/auth.api';
+import { getCreeks } from './api/creeks.api';
 
 // import Normalize from 'react-normalize';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -19,26 +20,21 @@ const Register = lazy(() => import('./pages/Register/Register'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 const UserPanel = lazy(() => import('./pages/UserPanel/UserPanel'));
 
-const BASE_URL = 'http://localhost:3500';
-
 export const UserContext = React.createContext(null);
 
 const App = () => {
   const [creeks, setCreeks] = useState([]);
   const [user, setUser] = useState(null);
-
   const [renderFooter, setrenderFooter] = useState(false);
 
   useEffect(() => {
-    const getCreeks = async () => {
-      let res = await fetch(`${BASE_URL}/creeks`);
-      let creeksList = await res.json();
+    const getData = async () => {
+      setCreeks(await getCreeks());
 
-      setCreeks(creeksList);
+      await getUser();
     };
 
-    getUser();
-    getCreeks();
+    getData();
   }, []);
 
   const showFooter = value => {

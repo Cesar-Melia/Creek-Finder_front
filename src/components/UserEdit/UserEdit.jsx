@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useContext } from 'react'
 import { UserContext } from '../../App';
 
-
-
 const UserEdit = () => {
   const { user } = useContext(UserContext);
   const BASE_URL = 'http://localhost:3500';
@@ -18,7 +16,7 @@ const UserEdit = () => {
       credentials: 'include',
     };
 
-    const res = await fetch(`${BASE_URL}/users/edit/logged`, requestOptions);
+    return await fetch(`${BASE_URL}/users/edit/logged`, requestOptions);
   };
 
   const setPreview = event => {
