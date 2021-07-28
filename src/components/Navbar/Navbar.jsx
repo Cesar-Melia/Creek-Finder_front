@@ -53,7 +53,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
             )}
-            {user === null && (
+            {!user && (
               <li>
                 <NavLink to='/register' activeClassName='active-auth' className='nav__link nav__link--auth'>
                   Registro
