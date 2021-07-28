@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useContext } from 'react'
+import { UserContext } from '../../App';
 
 
 
 const UserEdit = () => {
+  const { user } = useContext(UserContext);
   const BASE_URL = 'http://localhost:3500';
 
   const [imgPreview, setImgPreview] = useState(null);
@@ -37,6 +40,8 @@ const UserEdit = () => {
 
     const form = new FormData();
     form.append('userName', event.target.userName.value);
+    form.append('password', event.target.password.value);
+    form.append('email', event.target.email.value);
     form.append('img', event.target.img.files[0]);
 
     sendUserToApi(form);
@@ -49,7 +54,9 @@ const UserEdit = () => {
       style={{ marginTop: '200px' }}
       encType='multipart/form-data'
     >
-      <input type='text' name='userName' />
+      <input type='text' name='userName' value={user.userName} />
+      <input type='password' name='password' placeholder="Nueva Contraseña" />
+      <input type='email' name='email' value={user.email} />
       <input type='file' name='img' onChange={setPreview} />
       <input type='submit' value='Enviar' />
 
