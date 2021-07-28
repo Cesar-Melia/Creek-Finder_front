@@ -1,8 +1,12 @@
 import Carousel from 'react-bootstrap/Carousel';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { UserContext } from '../../App';
+
 import './CarouselComp.scss';
 
-const CarouselComp = ({ creeks }) => {
+const CarouselComp = () => {
+  const { creeks } = useContext(UserContext);
+
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {

@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { CreekList, CreekFilterNav } from '../../components';
+import { UserContext } from '../../App';
+
 import './Creeks.scss';
 
 let creeksSelection;
 
-const Creeks = ({ creeks, showFooter }) => {
+const Creeks = ({ showFooter }) => {
+  const { creeks } = useContext(UserContext);
+
   showFooter(true);
   const [searchParam, setSearchParam] = useState();
   const [searchValue, setSearchValue] = useState();
@@ -17,7 +21,7 @@ const Creeks = ({ creeks, showFooter }) => {
   };
 
   if (searchParam && searchValue) {
-    creeksSelection = creeks.filter((creek) => creek[searchParam].toLowerCase().includes(searchValue.toLowerCase()));
+    creeksSelection = creeks.filter(creek => creek[searchParam].toLowerCase().includes(searchValue.toLowerCase()));
 
     console.log('Entra al if:', creeksSelection);
   } else {

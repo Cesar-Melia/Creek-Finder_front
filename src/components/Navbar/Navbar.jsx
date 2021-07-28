@@ -44,10 +44,17 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to='/top-creeks' activeClassName='active-item' className='nav__link nav__link--last'>
+              <NavLink to='/top-creeks' activeClassName='active-item' className='nav__link nav__link'>
                 Top 10
               </NavLink>
             </li>
+            {user && (
+              <li>
+                <NavLink to='/favorite-creeks' activeClassName='active-item' className='nav__link nav__link--last'>
+                  Favoritas
+                </NavLink>
+              </li>
+            )}
             {!user && (
               <li>
                 <NavLink to='/login' activeClassName='active-auth' className='nav__link nav__link--auth'>
