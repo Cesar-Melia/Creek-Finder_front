@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import Logo from '../../assets/logo_beach_300.png';
 import { NavLink, Link } from 'react-router-dom';
 import { UserContext } from '../../App';
@@ -8,6 +9,8 @@ import './Navbar.scss';
 
 const Navbar = () => {
   const { user, saveUser } = useContext(UserContext);
+  const history = useHistory();
+
   // const [user, setUser] = useState(session);
 
   console.log('usuario: ', user);
@@ -20,6 +23,7 @@ const Navbar = () => {
     const res = await logout();
     if (res.ok) {
       saveUser(null);
+      history.push('/');
     } else {
       console.log('No te has deslogueado');
     }
