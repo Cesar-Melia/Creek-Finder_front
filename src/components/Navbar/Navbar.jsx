@@ -11,13 +11,7 @@ const Navbar = () => {
   const { user, saveUser } = useContext(UserContext);
   const history = useHistory();
 
-  // const [user, setUser] = useState(session);
-
   console.log('usuario: ', user);
-
-  // useEffect(() => {
-  //   setUser(session);
-  // }, [session]);
 
   const logoutUser = async () => {
     const res = await logout();
@@ -71,9 +65,11 @@ const Navbar = () => {
             {user && <li></li>}
             {user && (
               <li>
-                <div className='nav__user'>
+                <div className='nav__user '>
                   <NavLink to='/user-panel'>
-                    <img src={user.img} alt={user.userName} className='nav__user-img' />
+                    <div className='nav__user-round-img'>
+                      <img src={user.img} alt={user.userName} className='nav__user-img img-circle' />
+                    </div>
                   </NavLink>
                   <span onClick={logoutUser} className='nav__link nav__link--auth'>
                     Logout
