@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import { UserContext } from '../../App';
 
+import './UserProfile.scss'
+
 const UserProfile = () => {
   const { user } = useContext(UserContext);
   // useEffect(() => {
@@ -12,15 +14,22 @@ const UserProfile = () => {
   // }
 
   return (
-    <div>
+    <div class="profile-container">
       {user && (
-        <div>
-          <p>hola</p>
-          <img src={user.img} alt={user.userName} />
+        <div class="profile-container__box">
+          <img src={user.img} alt={user.userName} class="profile-container__img" />
           <h3>{user.userName}</h3>
           <p>{user.email}</p>
           <p>{user.role}</p>
-          <p>{user.favorites}</p>
+          {user.favorites.length > 0 ? <p class="profile-container__favoritos">Favoritos:</p> : ''}
+          <ul>
+            {user.favorites.map((favorite) => {
+              return (
+                <li>{favorite.name}</li>
+              )
+
+            })}
+          </ul>
         </div>
       )}
     </div>

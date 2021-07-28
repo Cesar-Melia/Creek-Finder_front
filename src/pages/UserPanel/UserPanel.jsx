@@ -10,7 +10,7 @@ const UserPanel = () => {
     setEdit(!edit)
   }
   return (
-    <div>
+    <div class="background-container">
       {!edit && (
         <UserProfile />
       )}
@@ -18,7 +18,10 @@ const UserPanel = () => {
       {edit && (
         <UserEdit />
       )}
-      <button onClick={showEdit}>{edit ? 'Cancelar' : 'Editar'}</button>
+      <div class="button-container">
+        <button onClick={showEdit}>{edit ? 'Cancelar' : 'Editar'}</button>
+      </div>
+
     </div>
   );
 };

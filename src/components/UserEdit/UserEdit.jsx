@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useContext } from 'react'
 import { UserContext } from '../../App';
 
+import './UserEdit.scss'
+
 const UserEdit = () => {
   const { user } = useContext(UserContext);
   const BASE_URL = 'http://localhost:3500';
@@ -44,26 +46,26 @@ const UserEdit = () => {
   };
 
   return (
-    <>
+    <div class="form-container">
       {user && (
         <form
           onSubmit={submitForm}
-          style={{ marginTop: '200px' }}
           encType='multipart/form-data'
+          class="form-container__box"
         >
 
 
-          {imgPreview ? <img src={imgPreview} alt='preview' /> : <img src={user.img} alt='imagenUsuario' />}
+          {imgPreview ? <img src={imgPreview} alt='preview' class="form-container__img" /> : <img src={user.img} alt='imagenUsuario' class="form-container__img" />}
 
           <input type='text' name='userName' defaultValue={user.userName} maxlength="15" />
           <input type='password' name='password' placeholder="Nueva Contraseña" minlength="8" pattern="(?=.*\d)(?=.*[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ].*" title="Tu contraseña tiene que tener 8 caracteres ( 1 mayuscula y  1 numero)" />
           <input type='email' name='email' defaultValue={user.email} />
           <input type='file' name='img' onChange={setPreview} />
-          <input type='submit' value='Editar' />
+          <input type='submit' value='Editar' class="button" />
 
         </form>
       )}
-    </>
+    </div>
   );
 };
 
