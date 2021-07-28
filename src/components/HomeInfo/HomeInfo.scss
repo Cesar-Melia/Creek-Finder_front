@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+
+  &__block {
+    width: 30%;
+    padding: 15px;
+    background-color: var(--color-green-light);
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+    h2 {
+      text-align: center;
+      color: var(--color-blue-dark);
+    }
+
+    p {
+      text-align: justify;
+      color: var(--color-blue-dark);
+    }
+  }
+}

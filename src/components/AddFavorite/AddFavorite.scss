@@ -11,5 +11,9 @@
     &--red {
       color: var(--color-red-heart);
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

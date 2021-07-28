@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { editUser } from '../../api/user.api';
-import { useContext } from 'react';
 import { UserContext } from '../../App';
 
 import './UserEdit.scss';
 
 const UserEdit = () => {
   const { user } = useContext(UserContext);
-  const BASE_URL = 'http://localhost:3500';
 
   const [imgPreview, setImgPreview] = useState(null);
 

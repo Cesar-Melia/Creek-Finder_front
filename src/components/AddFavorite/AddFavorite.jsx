@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { addFavorite, deleteFavorite } from '../../api/user.api';
+import { UserContext } from '../../App';
+
 import './AddFavorite.scss';
 
-const BASE_URL = 'http://localhost:3500';
-
 const AddFavorite = ({ creekId }) => {
+  const { user } = useContext(UserContext);
+
   const emptyHeart = 'icon-heart add-favorite__icon ';
   const fullHeart = 'icon-heart_full add-favorite__icon add-favorite__icon--red';
 
@@ -11,16 +14,10 @@ const AddFavorite = ({ creekId }) => {
   const [switchFavorite, setSwitchFavorite] = useState(false);
 
   useEffect(() => {
-    const checkFavorites = async () => {
-      const requestOptions = {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-      };
+    console.log('Usuario: ', user);
+    console.log('Cala: ', creekId);
 
-      let res = await fetch(`${BASE_URL}/users/logged`, requestOptions);
-      let user = await res.json();
-
+    if (user) {
       if (user.favorites && user.favorites.find(fav => fav === creekId)) {
         setOption('delete');
         setSwitchFavorite(true);
@@ -28,21 +25,19 @@ const AddFavorite = ({ creekId }) => {
         setOption('add');
         setSwitchFavorite(false);
       }
-    };
+    }
 
-    checkFavorites();
+    console.log('opcion: ', option);
   }, [switchFavorite]);
 
-  console.log(creekId);
-
   const setFavorites = async () => {
-    const requestOptions = {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-    };
+    if (option === 'delete') {
+      await deleteFavorite();
+    }
 
-    await fetch(`${BASE_URL}/users/${option}-favorite/${creekId}`, requestOptions);
+    if (option === 'add') {
+      await addFavorite();
+    }
 
     setSwitchFavorite(!switchFavorite);
   };

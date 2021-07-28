@@ -9,9 +9,25 @@ const CarouselComp = ({ creeks }) => {
     setIndex(selectedIndex);
   };
 
+  const sortTopCreeks = () => {
+    const sortedCreeks = creeks
+      .sort((a, b) => {
+        if (a.timesFav > b.timesFav) {
+          return -1;
+        }
+        if (a.timesFav < b.timesFav) {
+          return 1;
+        }
+        return 0;
+      })
+      .slice(0, 10);
+
+    return sortedCreeks;
+  };
+
   return (
     <Carousel activeIndex={index} onSelect={handleSelect} touch='true' className='carousel'>
-      {creeks.map(creek => {
+      {sortTopCreeks().map(creek => {
         return (
           <Carousel.Item interval={5000} key={JSON.stringify(creek)}>
             <img className='carousel__img' src={creek.img[0]} alt={creek.name} />
