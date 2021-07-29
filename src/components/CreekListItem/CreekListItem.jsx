@@ -31,23 +31,24 @@ const CreekListItem = ({ creek }) => {
         </div>
       </div>
       <div>
-        {creek.img.map((img, index) => {
-          if (index < 3) {
-            return (
-              <img
-                src={img}
-                alt={creek.name + index}
-                className='item__photo'
-                key={JSON.stringify(img)}
-                onClick={() => {
-                  setPhotoIndex(index);
-                  return setIsOpen(true);
-                }}
-              />
-            );
-          }
-          return null;
-        })}
+        {creek.img &&
+          creek.img.map((img, index) => {
+            if (index < 3) {
+              return (
+                <img
+                  src={img}
+                  alt={creek.name + index}
+                  className='item__photo'
+                  key={JSON.stringify(img)}
+                  onClick={() => {
+                    setPhotoIndex(index);
+                    return setIsOpen(true);
+                  }}
+                />
+              );
+            }
+            return null;
+          })}
       </div>
       <ReactBnbGallery show={isOpen} photos={photos} activePhotoIndex={photoIndex} onClose={() => setIsOpen(false)} />
     </div>
