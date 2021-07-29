@@ -31,7 +31,7 @@ const Creeks = ({ showFooter }) => {
   return (
     <main>
       <div className='creeks'>
-        <CreekList creeks={creeksSelection} />
+        <CreekList creeks={creeksSelection} title={'Lista de Calas'} />
         <CreekFilterNav filterCreeks={filterCreeks} />
       </div>
     </main>

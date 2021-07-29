@@ -1,15 +1,15 @@
 import { CreekListItem, MapButton } from '../../components';
 import './CreekList.scss';
 
-const CreekList = ({ creeks }) => {
+const CreekList = ({ creeks, title }) => {
   return (
     <section className='list'>
       <div className='list__title-block'>
-        <h2 className='list__title'>Lista de Calas</h2>
+        <h2 className='list__title'>{title}</h2>
         <MapButton />
       </div>
       <div>
-        {creeks.map((creek) => (
+        {creeks.map(creek => (
           <CreekListItem key={JSON.stringify(creek)} creek={creek} />
         ))}
       </div>

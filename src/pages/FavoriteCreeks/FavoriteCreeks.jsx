@@ -1,15 +1,14 @@
 import { useContext, useState } from 'react';
 import { UserContext } from '../../App';
-import { CreekList, CreekFilterNav } from '../../components'
+import { CreekList, CreekFilterNav } from '../../components';
 
-
-import './FavoriteCreeks.scss'
+import './FavoriteCreeks.scss';
 
 let creeksSelection;
 
 const FavoriteCreeks = ({ showFooter }) => {
   const { user } = useContext(UserContext);
-  console.log(user)
+  console.log(user);
 
   showFooter(true);
   const [searchParam, setSearchParam] = useState();
@@ -23,7 +22,9 @@ const FavoriteCreeks = ({ showFooter }) => {
   };
   if (user) {
     if (searchParam && searchValue) {
-      creeksSelection = user.favorites.filter(creek => creek[searchParam].toLowerCase().includes(searchValue.toLowerCase()));
+      creeksSelection = user.favorites.filter(creek =>
+        creek[searchParam].toLowerCase().includes(searchValue.toLowerCase())
+      );
 
       console.log('Entra al if:', creeksSelection);
     } else {
@@ -31,13 +32,12 @@ const FavoriteCreeks = ({ showFooter }) => {
     }
   }
 
-
   return (
     <>
       {user && (
         <main>
           <div className='creeks'>
-            <CreekList creeks={creeksSelection} />
+            <CreekList creeks={creeksSelection} title={'Calas Favoritas'} />
             <CreekFilterNav filterCreeks={filterCreeks} />
           </div>
         </main>
