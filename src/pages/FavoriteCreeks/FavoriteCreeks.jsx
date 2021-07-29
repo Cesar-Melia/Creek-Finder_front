@@ -21,12 +21,13 @@ const FavoriteCreeks = ({ showFooter }) => {
     setSearchValue(value);
   };
   if (user) {
+    // console.log('usuario favorites', user.favorites)
     if (searchParam && searchValue) {
       creeksSelection = user.favorites.filter(creek =>
         creek[searchParam].toLowerCase().includes(searchValue.toLowerCase())
       );
 
-      console.log('Entra al if:', creeksSelection);
+      // console.log('Entra al if:', creeksSelection);
     } else {
       creeksSelection = user.favorites;
     }

@@ -21,12 +21,6 @@ const UserProfile = () => {
           <h3>{user.userName}</h3>
           <p>{user.email}</p>
           <p>{user.role}</p>
-          {user.favorites.length > 0 ? <p class='profile-container__favoritos'>Favoritos:</p> : ''}
-          <ul>
-            {user.favorites.map(favorite => {
-              return <li>{favorite.name}</li>;
-            })}
-          </ul>
         </div>
       )}
     </div>

@@ -5,7 +5,7 @@ import './Login.scss';
 const Login = ({ showFooter }) => {
   showFooter(true);
   return (
-    <main>
+    <main class="container-login">
       {/* <div className='wrapper'>
         <div className='wave'></div>
         
