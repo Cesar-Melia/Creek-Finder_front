@@ -57,27 +57,36 @@ const CreekFiltrerNav = ({ creeks, setNewSelection }) => {
   return (
     <nav className='filter-nav'>
       <form onChange={handleChange}>
-        <input type='text' placeholder='Buscar Cala' className='filter-nav__input' name='name' />
+        <label for='name'>
+          <p className='filter-nav__item'>Nombre</p>
+          <input type='text' placeholder='Buscar Cala' className='filter-nav__input' name='name' id='name' />
+        </label>
 
-        <select className='filter-nav__select' defaultValue='' name='province'>
-          {provinces.map(prov => {
-            return (
-              <option value={prov} key={JSON.stringify(prov)}>
-                {prov}
-              </option>
-            );
-          })}
-        </select>
+        <label for='province'>
+          <p className='filter-nav__item'>Provincia</p>
+          <select className='filter-nav__select' defaultValue='' name='province' id='province'>
+            {provinces.map(prov => {
+              return (
+                <option value={prov} key={JSON.stringify(prov)}>
+                  {prov}
+                </option>
+              );
+            })}
+          </select>
+        </label>
 
-        <select className='filter-nav__select' defaultValue='' name='type'>
-          {types.map(type => {
-            return (
-              <option value={type} key={JSON.stringify(type)}>
-                {type}
-              </option>
-            );
-          })}
-        </select>
+        <label for='type'>
+          <p className='filter-nav__item'>Tipo de Cala</p>
+          <select className='filter-nav__select' defaultValue='' name='type' id='type'>
+            {types.map(type => {
+              return (
+                <option value={type} key={JSON.stringify(type)}>
+                  {type}
+                </option>
+              );
+            })}
+          </select>
+        </label>
       </form>
     </nav>
   );
