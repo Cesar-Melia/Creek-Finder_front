@@ -8,13 +8,13 @@ const FavoriteCreeks = ({ showFooter }) => {
   const { user } = useContext(UserContext);
 
   const [creeksSelection, setCreeksSelection] = useState([]);
-  console.log(user);
+  // console.log(user);
 
   showFooter(true);
   const [searchParam, setSearchParam] = useState();
   const [searchValue, setSearchValue] = useState();
 
-  console.log('Parametros del filtro: ', searchParam, searchValue);
+  // console.log('Parametros del filtro: ', searchParam, searchValue);
 
   useEffect(() => {
     if (user) {

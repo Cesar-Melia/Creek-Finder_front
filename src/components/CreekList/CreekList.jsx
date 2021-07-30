@@ -12,8 +12,7 @@ const CreekList = ({ creeks, title }) => {
       </div>
       <div>
         {creeks.map(creek => {
-          console.log('creek.map funciona', creek)
-          return <CreekListItem key={JSON.stringify(creek)} creek={creek} />
+          return <CreekListItem key={JSON.stringify(creek)} creek={creek} />;
         })}
       </div>
     </section>

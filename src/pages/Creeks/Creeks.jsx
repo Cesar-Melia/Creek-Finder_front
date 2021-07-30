@@ -9,35 +9,40 @@ const Creeks = ({ showFooter }) => {
   const [creeksSelection, setCreeksSelection] = useState([]);
 
   showFooter(true);
-  const [searchParam, setSearchParam] = useState();
-  const [searchValue, setSearchValue] = useState();
+  // const [searchParam, setSearchParam] = useState();
+  // const [searchValue, setSearchValue] = useState();
 
-  console.log('Parametros del filtro: ', searchParam, searchValue);
+  // console.log('Parametros del filtro: ', searchParam, searchValue);
+
+  const setNewSelection = selectedCreeks => {
+    setCreeksSelection(selectedCreeks);
+  };
 
   useEffect(() => {
     if (creeks) {
-      let selection = [];
+      // let selection = [];
+      setCreeksSelection(creeks);
 
-      if (searchParam && searchValue) {
-        selection = creeks.filter(creek => creek[searchParam].toLowerCase().includes(searchValue.toLowerCase()));
-      } else {
-        selection = creeks;
-      }
+      // if (searchParam && searchValue) {
+      //   selection = creeks.filter(creek => creek[searchParam].toLowerCase().includes(searchValue.toLowerCase()));
+      // } else {
+      //   selection = creeks;
+      // }
 
-      setCreeksSelection(selection);
+      // setCreeksSelection(selection);
     }
-  }, [creeks, searchValue, searchParam]);
+  }, []);
 
-  const filterCreeks = (param, value) => {
-    setSearchParam(param);
-    setSearchValue(value);
-  };
+  // const filterCreeks = (param, value) => {
+  //   setSearchParam(param);
+  //   setSearchValue(value);
+  // };
 
   return (
     <main>
       <div className='creeks'>
         <CreekList creeks={creeksSelection} title={'Lista de Calas'} />
-        <CreekFilterNav filterCreeks={filterCreeks} />
+        <CreekFilterNav creeks={creeks} setNewSelection={setNewSelection} />
       </div>
     </main>
   );
