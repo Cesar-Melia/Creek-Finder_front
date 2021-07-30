@@ -41,18 +41,30 @@ const UserEdit = () => {
             <img src={user.img} alt='imagenUsuario' class='form-container__img' />
           )}
 
-          <input type='text' name='userName' defaultValue={user.userName} maxlength='15' />
+          <input
+            type='text'
+            name='userName'
+            defaultValue={user.userName}
+            maxlength='15'
+            className='form-container__input'
+          />
           <input
             type='password'
             name='password'
             placeholder='Nueva Contraseña'
+            className='form-container__input'
             minlength='8'
             pattern='(?=.*\d)(?=.*[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ].*'
             title='Tu contraseña tiene que tener 8 caracteres ( 1 mayuscula y  1 numero)'
           />
-          <input type='email' name='email' defaultValue={user.email} />
-          <input type='file' name='img' onChange={setPreview} />
-          <input type='submit' value='Editar' class='button' />
+          <input type='email' name='email' defaultValue={user.email} className='form-container__input' />
+
+          <label className='form-container__input-file'>
+            <p className='form-container__name'>Seleccionar Imagen</p>
+            <input type='file' name='img' onChange={setPreview} className='form-container__input' />
+          </label>
+
+          <input type='submit' value='Editar' class='button' className='form-container__button' />
         </form>
       )}
     </div>

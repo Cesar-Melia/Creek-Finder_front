@@ -18,9 +18,9 @@ const UserProfile = () => {
       {user && (
         <div class='profile-container__box'>
           <img src={user.img} alt={user.userName} class='profile-container__img' />
-          <h3>{user.userName}</h3>
-          <p>{user.email}</p>
-          <p>{user.role}</p>
+          <h3 className='profile-container__title'>{user.userName}</h3>
+          <p className='profile-container__text'>{user.email}</p>
+          <p className='profile-container__text'>{user.role}</p>
         </div>
       )}
     </div>
