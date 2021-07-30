@@ -18,7 +18,7 @@ const Creeks = ({ showFooter }) => {
     if (creeks) {
       setCreeksSelection(creeks);
     }
-  }, []);
+  }, [creeks]);
 
   return (
     <main>
