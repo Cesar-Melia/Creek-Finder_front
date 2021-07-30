@@ -59,7 +59,7 @@ const CreekFiltrerNav = ({ creeks, setNewSelection }) => {
       <form onChange={handleChange}>
         <label for='name'>
           <p className='filter-nav__item'>Nombre</p>
-          <input type='text' placeholder='Buscar Cala' className='filter-nav__input' name='name' id='name' />
+          <input type='text' className='filter-nav__input' name='name' id='name' />
         </label>
 
         <label for='province'>
