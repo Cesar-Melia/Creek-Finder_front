@@ -14,10 +14,6 @@ const AddFavorite = ({ creekId }) => {
   const [switchFavorite, setSwitchFavorite] = useState(false);
 
   useEffect(() => {
-    // console.log('Usuario: ', user);
-    // console.log('Cala: ', creekId);
-    // console.log('switcFavorite: : ', switchFavorite);
-
     if (user) {
       console.log('favoritos: ', user.favorites);
 

@@ -47,7 +47,7 @@ const Footer = () => {
           <ul>
             <h2 className='footer__title'>Ayuda</h2>
             <li>
-              <Link exact to='/contact' className='footer__link'>
+              <Link to='/contact' className='footer__link'>
                 Contacto
               </Link>
             </li>
