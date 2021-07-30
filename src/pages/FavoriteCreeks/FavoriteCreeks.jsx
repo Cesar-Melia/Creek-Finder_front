@@ -30,7 +30,7 @@ const FavoriteCreeks = ({ showFooter }) => {
 
       setCreeksSelection(selection);
     }
-  }, [user]);
+  }, [user, searchValue, searchParam]);
 
   const filterCreeks = (param, value) => {
     setSearchParam(param);
