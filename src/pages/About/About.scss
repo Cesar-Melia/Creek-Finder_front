@@ -1,4 +1,8 @@
+h2{
+  color: var(--color-blue-dark);
+}
 .about-container {
+
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -12,18 +16,21 @@
   &__card {
     display: flex;
     justify-content: space-around;
-    background-color: rgba(223, 211, 191, 0.431);
+    background-color:  var(--color-green-light);
     align-items: center;
     flex-direction: column;
     margin: 80px 0;
     width: 70%;
     border: 1px solid rgb(180, 180, 180);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding:20px 0;
+
   }
 
   &__text {
     width: 70%;
     text-align: justify;
+    color: var(--color-blue-dark);
   }
 
   &__path {
