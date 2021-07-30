@@ -11,10 +11,11 @@ const UserPanel = () => {
   return (
     <div class='background-container'>
       {!edit && <UserProfile />}
-
       {edit && <UserEdit />}
       <div class='button-container'>
-        <button onClick={showEdit}>{edit ? 'Cancelar' : 'Editar'}</button>
+        <button onClick={showEdit} className='button'>
+          {edit ? 'Cancelar' : 'Editar'}
+        </button>
       </div>
     </div>
   );

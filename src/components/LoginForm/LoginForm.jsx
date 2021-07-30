@@ -1,8 +1,8 @@
 import { useHistory } from 'react-router-dom';
-import { useContext } from 'react'
+import { useContext } from 'react';
 import { UserContext } from '../../App';
 
-import './LoginForm.scss';
+import '../../assets/styles/b-form.styles.scss';
 
 const BASE_URL = 'http://localhost:3500';
 
@@ -10,7 +10,7 @@ const LoginForm = () => {
   const { saveUser } = useContext(UserContext);
   const history = useHistory();
 
-  const submitForm = async (ev) => {
+  const submitForm = async ev => {
     ev.preventDefault();
 
     const { email, password } = ev.target;
@@ -34,7 +34,7 @@ const LoginForm = () => {
       console.log('respuesta fetch', usData);
 
       if (us.ok) {
-        saveUser(usData)
+        saveUser(usData);
         history.push('/');
       }
     } catch (error) {
@@ -43,19 +43,19 @@ const LoginForm = () => {
   };
 
   return (
-    <div className='login-container'>
-      <div className='login-container__main'>
-        <h2>Creek Finder</h2>
-        <form onSubmit={submitForm} className='login-container__form'>
+    <div className='b-form'>
+      <div className='b-form__main'>
+        <h2 className='b-form__title'>Login</h2>
+        <form onSubmit={submitForm} className='b-form__form'>
           <label>
-            <p>Email</p>
-            <input type='email' name='email' />
+            <p className='b-form__name'>Email</p>
+            <input type='email' name='email' className='b-form__input' />
           </label>
           <label>
-            <p>Contraseña</p>
-            <input type='password' name='password' />
+            <p className='b-form__name'>Contraseña</p>
+            <input type='password' name='password' className='b-form__input' />
           </label>
-          <button type='submit' className='btn btn-outline-primary'>
+          <button type='submit' className='b-form__button'>
             Iniciar sesión
           </button>
         </form>

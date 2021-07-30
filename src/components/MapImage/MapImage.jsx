@@ -9,8 +9,8 @@ import umbrella from '../../assets/umbrella-50.png';
 const MapImage = ({ creeks, setDetailId }) => {
   const history = useHistory();
   console.log(history);
-  const positionMenorca = [39.98, 4.0559];
-  const zoom = 11;
+  const positionSpain = [39.249, -3.55];
+  const zoom = 6;
 
   const umbrellaIcon = L.icon({
     iconUrl: umbrella,
@@ -22,21 +22,21 @@ const MapImage = ({ creeks, setDetailId }) => {
   return (
     <div className='map-image'>
       <ListButton className='list-button' />
-      <Map className='map-image' center={positionMenorca} zoom={zoom}>
+      <Map className='map-image' center={positionSpain} zoom={zoom}>
         <TileLayer
           attribution='<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url='https://{s}.tile.jawg.io/jawg-terrain/{z}/{x}/{y}{r}.png?access-token=p3g9U1eXuX4kSvLCpTgXgl1LjGcfCjXEhDFRRS2oBbxTCdXmJReCcot7HemafMoY'
         />
-        {creeks.map((creek) => {
+        {creeks.map(creek => {
           return (
             <Marker
               position={[creek.lat, creek.lng]}
               icon={umbrellaIcon}
               key={JSON.stringify(creek)}
-              onMouseOver={(ev) => {
+              onMouseOver={ev => {
                 ev.target.openPopup();
               }}
-              onMouseOut={(ev) => {
+              onMouseOut={ev => {
                 ev.target.closePopup();
               }}
               onClick={() => {
