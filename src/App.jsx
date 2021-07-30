@@ -105,7 +105,7 @@ const App = () => {
                   component={props => <Contact {...props} showFooter={showFooter} />}
                 />
                 <Route exact={true} path='/user-panel'>
-                  <UserPanel />
+                  <UserPanel showFooter={showFooter} />
                 </Route>
                 <Route exact={true} path='/favorite-creeks'>
                   <FavoriteCreeks showFooter={showFooter} />

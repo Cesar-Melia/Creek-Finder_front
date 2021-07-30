@@ -3,11 +3,12 @@ import { UserEdit, UserProfile } from '../../components';
 
 import './UserPanel.scss';
 
-const UserPanel = () => {
+const UserPanel = ({ showFooter }) => {
   const [edit, setEdit] = useState(false);
   const showEdit = () => {
     setEdit(!edit);
   };
+  showFooter(true)
   return (
     <div class='background-container'>
       {!edit && <UserProfile />}
