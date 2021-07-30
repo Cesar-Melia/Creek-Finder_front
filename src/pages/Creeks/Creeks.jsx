@@ -9,10 +9,6 @@ const Creeks = ({ showFooter }) => {
   const [creeksSelection, setCreeksSelection] = useState([]);
 
   showFooter(true);
-  // const [searchParam, setSearchParam] = useState();
-  // const [searchValue, setSearchValue] = useState();
-
-  // console.log('Parametros del filtro: ', searchParam, searchValue);
 
   const setNewSelection = selectedCreeks => {
     setCreeksSelection(selectedCreeks);
@@ -20,23 +16,9 @@ const Creeks = ({ showFooter }) => {
 
   useEffect(() => {
     if (creeks) {
-      // let selection = [];
       setCreeksSelection(creeks);
-
-      // if (searchParam && searchValue) {
-      //   selection = creeks.filter(creek => creek[searchParam].toLowerCase().includes(searchValue.toLowerCase()));
-      // } else {
-      //   selection = creeks;
-      // }
-
-      // setCreeksSelection(selection);
     }
   }, []);
-
-  // const filterCreeks = (param, value) => {
-  //   setSearchParam(param);
-  //   setSearchValue(value);
-  // };
 
   return (
     <main>

@@ -57,20 +57,9 @@ const CreekFiltrerNav = ({ creeks, setNewSelection }) => {
   return (
     <nav className='filter-nav'>
       <form onChange={handleChange}>
-        <input
-          type='text'
-          placeholder='Buscar Cala'
-          className='filter-nav__input'
-          name='name'
-          // onChange={ev => submitForm(ev, 'name')}
-        />
+        <input type='text' placeholder='Buscar Cala' className='filter-nav__input' name='name' />
 
-        <select
-          className='filter-nav__select'
-          defaultValue=''
-          name='province'
-          // onChange={ev => submitForm(ev, 'province')}
-        >
+        <select className='filter-nav__select' defaultValue='' name='province'>
           {provinces.map(prov => {
             return (
               <option value={prov} key={JSON.stringify(prov)}>
@@ -80,12 +69,7 @@ const CreekFiltrerNav = ({ creeks, setNewSelection }) => {
           })}
         </select>
 
-        <select
-          className='filter-nav__select'
-          defaultValue=''
-          name='type'
-          // onChange={ev => submitForm(ev, 'province')}
-        >
+        <select className='filter-nav__select' defaultValue='' name='type'>
           {types.map(type => {
             return (
               <option value={type} key={JSON.stringify(type)}>
@@ -95,18 +79,6 @@ const CreekFiltrerNav = ({ creeks, setNewSelection }) => {
           })}
         </select>
       </form>
-
-      {/* <ul>
-        <li className='filter-nav__item' onClick={ev => submitForm(ev, 'type', 'arena')}>
-          Playa de arena
-        </li>
-        <li className='filter-nav__item' onClick={ev => submitForm(ev, 'type', 'rocas')}>
-          Playa de rocas
-        </li>
-        <li className='filter-nav__item' onClick={ev => submitForm(ev, 'type', 'cantos')}>
-          Playa de cantos
-        </li>
-      </ul> */}
     </nav>
   );
 };
