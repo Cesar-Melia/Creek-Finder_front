@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3500';
+const BASE_URL = 'https://creek-finder.herokuapp.com';
 const addFavoriteUrl = `${BASE_URL}/users/add-favorite`;
 const deleteFavoriteUrl = `${BASE_URL}/users/delete-favorite`;
 

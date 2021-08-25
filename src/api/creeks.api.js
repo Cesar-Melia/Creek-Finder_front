@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3500';
+const BASE_URL = 'https://creek-finder.herokuapp.com';
 const getCreeksUrl = `${BASE_URL}/creeks`;
 
 export const getCreeks = async () => {

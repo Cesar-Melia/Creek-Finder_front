@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3500';
+const BASE_URL = 'https://creek-finder.herokuapp.com';
 const checkSessionUrl = `${BASE_URL}/users/logged`;
 const logoutUrl = `${BASE_URL}/auth/logout`;
 
@@ -12,7 +12,10 @@ export const checkSession = async () => {
   let res = await fetch(checkSessionUrl, requestOptions);
   let user = await res.json();
 
-  return user;
+  console.log(user);
+  if (user) {
+    return user;
+  }
 };
 
 export const logout = async () => {

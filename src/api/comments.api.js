@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3500';
+const BASE_URL = 'https://creek-finder.herokuapp.com';
 
 export const getComments = async creekId => {
   const res = await fetch(`${BASE_URL}/comments/${creekId}`);
