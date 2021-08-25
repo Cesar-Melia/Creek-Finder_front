@@ -1,9 +1,9 @@
-@import './assets/fonts/icons/style.scss';
+//@import './assets/fonts/icons/style.scss';
 
 @font-face {
   font-family: 'lato';
-  src: url('./assets/fonts/Lato/Lato-Regular.ttf'), url('./assets/fonts/Lato/Lato-Bold.ttf'),
-    url('./assets/fonts/Lato/Lato-Italic.ttf');
+  src: url('./assets/fonts/Lato/Lato-Regular.ttf'); //, url('./assets/fonts/Lato/Lato-Bold.ttf'),
+  // url('./assets/fonts/Lato/Lato-Italic.ttf');
 }
 
 @font-face {
@@ -50,11 +50,9 @@ main {
 
 body {
   font-family: 'lato';
-  
 }
 
 p {
   margin: 0;
   padding: 0;
 }
-
